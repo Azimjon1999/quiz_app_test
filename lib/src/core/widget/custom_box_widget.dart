@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 
@@ -6,12 +7,14 @@ class CustomBoxWidget extends StatelessWidget {
   final double width;
   final double height;
   final Color backgroundColor;
+  final EdgeInsets padding;
   const CustomBoxWidget({
     super.key,
-    this.width = 185,
-    this.height = 300,
+    this.width = 300,
+    this.height = 190,
     required this.child,
     this.backgroundColor = AppColors.white,
+    this.padding = EdgeInsets.zero,
   });
 
   @override
@@ -19,6 +22,7 @@ class CustomBoxWidget extends StatelessWidget {
     return Container(
       width: width,
       height: height,
+      padding: padding,
       transform: Matrix4.skewX(-0.1),
       decoration: BoxDecoration(
         color: backgroundColor,
