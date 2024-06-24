@@ -1,7 +1,8 @@
 import "package:flutter/material.dart";
 import "package:quiz_app/src/core/style/colors.dart";
+import "package:quiz_app/src/core/widget/custom_box_widget.dart";
 
-import "../../../../core/localization/words.dart";
+// import "../../../../core/localization/words.dart";
 import "../../../../core/widget/scaffold_with_background_widget.dart";
 
 class SplashPage extends StatelessWidget {
@@ -15,10 +16,17 @@ class SplashPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.transparent,
       ),
-      body: ScaffoldWithBackgroundWidget(
+      body: const ScaffoldWithBackgroundWidget(
         child: Center(
-          child: Text(
-            Words.welcome.tr(context),
+          child: CustomBoxWidget(
+            height: 100,
+            width: 200,
+            child: Center(
+              child: Text(
+                'Quiz',
+                style: TextStyle(color: Colors.black),
+              ),
+            ),
           ),
         ),
       ),
