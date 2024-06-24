@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:quiz_app/src/core/style/colors.dart";
+import "package:quiz_app/src/core/style/text_style.dart";
 
 import "../../../../core/localization/words.dart";
 import "../../../../core/widget/scaffold_with_background_widget.dart";
@@ -18,7 +19,7 @@ class SplashPage extends StatelessWidget {
       body: ScaffoldWithBackgroundWidget(
         child: Center(
           child: Text(
-            Words.welcome.tr(context),
+            Words.welcome.tr(context),style: AppTextStyle().appNameFirst,
           ),
         ),
       ),
