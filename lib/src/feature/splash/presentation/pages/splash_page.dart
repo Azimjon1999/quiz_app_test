@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import "package:quiz_app/src/core/localization/words.dart";
-
+import "package:quiz_app/src/core/style/text_style.dart";
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -10,6 +10,9 @@ class SplashPage extends StatelessWidget {
           body: Center(
         child: Text(
           Words.welcome.tr(context),
+          style: AppTextStyle().appNameQuiz?.copyWith(
+            fontSize: 50
+          ),
         ),
       ));
 }
