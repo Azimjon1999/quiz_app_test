@@ -13,6 +13,10 @@ final class AppRouter{
           path: AppRouteName.splashPage,
           builder: (BuildContext context, GoRouterState state) => const SplashPage(),
         ),
+        GoRoute(
+          path: AppRouteName.chooseLanguage,
+          builder: (BuildContext context, GoRouterState state) => const SplashPage(),
+        ),
       ]
   );
 }

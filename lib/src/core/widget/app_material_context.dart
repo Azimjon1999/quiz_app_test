@@ -40,7 +40,7 @@ class AppMaterialContext extends StatelessWidget {
                 routerConfig: AppRouter.router,
                 restorationScopeId: "material_app",
                 debugShowCheckedModeBanner: false,
-                locale: InheritedLocalNotifier.maybeOf(context)?.appLocal ?? const Locale("ru", "RU"),
+                locale: InheritedLocalNotifier.maybeOf(context)?.appLocal ?? const Locale("uz", "UZ"),
                 supportedLocales: const <Locale>[Locale("uz", "UZ"), Locale("ru", "RU")],
                 localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
                   AppLocalizations.delegate,
@@ -62,7 +62,7 @@ class AppMaterialContext extends StatelessWidget {
                     }
                   }
                   local.changeLocal(LanguageType.ru);
-                  return const Locale("ru", "RU");
+                  return const Locale("uz", "UZ");
                 },
                 theme: InheritedThemeNotifier.maybeOf(context)?.theme?? themeController.theme,
                 builder: (BuildContext context, Widget? child) => MediaQuery.withNoTextScaling(

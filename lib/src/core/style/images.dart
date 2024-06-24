@@ -21,11 +21,11 @@ sealed class AppImages {
 
 
 
-  static final Image panPersonalData = Image.asset(
-    "assets/images/personal_data_pan.png",
-    height: 28.h,
-    width: 28.w,
-    fit: BoxFit.fitHeight,
+  static final Image someImage = Image.asset(
+    "assets/images/background_image.png",
+    height: double.infinity,
+    width: double.infinity,
+    fit: BoxFit.cover,
   );
 }
 

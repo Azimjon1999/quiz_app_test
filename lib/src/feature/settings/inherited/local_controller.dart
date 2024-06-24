@@ -7,10 +7,12 @@ import "../model/language_type.dart";
 
 const String _spLocalKey = "app_local";
 
-ChangeNotifierProvider<LocalController> localVM = ChangeNotifierProvider<LocalController>(create: (BuildContext context) => LocalController());
+ChangeNotifierProvider<LocalController> localVM = ChangeNotifierProvider<LocalController>(
+  create: (BuildContext context) => LocalController(),
+);
 
 class LocalController with ChangeNotifier {
-  LocalController() : _appLocal = "ru" {
+  LocalController() : _appLocal = "uz" {
     SharedPreferences.getInstance().then<void>(
       (SharedPreferences sp) {
         final String? appLocal = sp.getString(_spLocalKey);
