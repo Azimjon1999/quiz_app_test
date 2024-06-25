@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:provider/provider.dart";
 import "package:quiz_app/src/core/style/colors.dart";
-import "package:quiz_app/src/core/widget/custom_box_widget.dart";
+import "package:quiz_app/src/core/widget/app_title_widget.dart";
 import "package:quiz_app/src/core/widget/custom_button_widget.dart";
 import "package:quiz_app/src/core/widget/my_textfield_widget.dart";
 import "package:quiz_app/src/feature/auth/controller/auth_controller.dart";
@@ -28,30 +28,7 @@ class LoginPage extends StatelessWidget {
             child: Column(
               children: [
                 const SizedBox(height: 190),
-                const CustomBoxWidget(
-                  height: 174,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Quiz',
-                        style: TextStyle(
-                          fontSize: 75,
-                          color: AppColors.c0048B5,
-                          fontFamily: 'IrishGrover',
-                        ),
-                      ),
-                      Text(
-                        'First',
-                        style: TextStyle(
-                          fontSize: 35,
-                          color: AppColors.c0048B5,
-                          fontFamily: 'IrishGrover',
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                const AppTitleWidget(),
                 const SizedBox(height: 55),
                 MyTextField(
                   controller: provider.emailC,
