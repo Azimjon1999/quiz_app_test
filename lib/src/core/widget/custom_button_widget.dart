@@ -27,17 +27,19 @@ class CustomButtonWidget extends StatelessWidget {
     return CustomBoxWidget(
       width: witdh,
       height: height,
-      child: MaterialButton(
-        elevation: elevation,
-        height: height,
-        minWidth: witdh,
-        onPressed: func,
-        color: buttonColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-          side: borderSide,
+      child: Center(
+        child: MaterialButton(
+          elevation: elevation,
+          height: height,
+          minWidth: witdh,
+          onPressed: func,
+          color: buttonColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+            side: borderSide,
+          ),
+          child: child,
         ),
-        child: child,
       ),
     );
   }

@@ -21,8 +21,15 @@ sealed class AppImages {
     fit: BoxFit.cover,
   );
 
-  static final SvgPicture back = SvgPicture.asset(
+  static final SvgPicture down = SvgPicture.asset(
     "assets/images/down.svg",
+    height: 20.h,
+    width: 20.w,
+    // fit: BoxFit.cover,
+  );
+
+  static final SvgPicture back = SvgPicture.asset(
+    "assets/images/vector.svg",
     height: 30.h,
     width: 30.w,
     fit: BoxFit.cover,
@@ -44,8 +51,8 @@ sealed class AppImages {
 
   static final SvgPicture menuIcon = SvgPicture.asset(
     "assets/images/menu.svg",
-    height: 30.h,
-    width: 30.w,
+    height: 40.h,
+    width: 40.w,
     fit: BoxFit.cover,
   );
 
@@ -58,8 +65,8 @@ sealed class AppImages {
 
   static final SvgPicture userIcon = SvgPicture.asset(
     "assets/images/user_circler.svg",
-    height: 30.h,
-    width: 30.w,
+    height: 50.h,
+    width: 50.w,
     fit: BoxFit.cover,
   );
 

@@ -9,6 +9,7 @@ final class AppRouteName {
   static const String loginPage = "/login_page";
   static const String registerPage = "/register_page";
   static const String otpPage = "otp_page";
+  static const String homePage = "/";
   static const String profilePage = "/profile_page";
 
 }

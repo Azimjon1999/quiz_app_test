@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
+import "package:go_router/go_router.dart";
 import "package:provider/provider.dart";
+import "package:quiz_app/src/core/routes/app_route_name.dart";
 import "package:quiz_app/src/core/style/colors.dart";
 import "package:quiz_app/src/core/widget/app_title_widget.dart";
 import "package:quiz_app/src/core/widget/custom_button_widget.dart";
@@ -16,11 +18,6 @@ class LoginPage extends StatelessWidget {
     final provider = Provider.of<AuthController>(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      extendBodyBehindAppBar: true,
-      backgroundColor: AppColors.transparent,
-      appBar: AppBar(
-        backgroundColor: AppColors.transparent,
-      ),
       body: ScaffoldWithBackgroundWidget(
         child: SingleChildScrollView(
           child: Padding(
@@ -66,8 +63,10 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 28),
-                MaterialButton(
-                  onPressed: () {},
+                InkWell(
+                  onTap: () {
+                    context.go(AppRouteName.registerPage);
+                  },
                   child: const Text(
                     'Don’t have an account ?',
                     style: TextStyle(
