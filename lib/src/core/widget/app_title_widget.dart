@@ -8,7 +8,8 @@ class AppTitleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomBoxWidget(
-      height: 174,
+      height: 175,
+      width: 290,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -23,7 +24,7 @@ class AppTitleWidget extends StatelessWidget {
           Text(
             'First',
             style: TextStyle(
-              fontSize: 35,
+              fontSize: 45,
               color: AppColors.c0048B5,
               fontFamily: 'IrishGrover',
             ),

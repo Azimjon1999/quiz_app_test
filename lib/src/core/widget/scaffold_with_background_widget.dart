@@ -15,10 +15,11 @@ class ScaffoldWithBackgroundWidget extends StatelessWidget {
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-              "assets/images/background_image.png",
-            ),
-            fit: BoxFit.cover),
+          image: AssetImage(
+            "assets/images/background_image.png",
+          ),
+          fit: BoxFit.cover,
+        ),
       ),
       child: child,
     );
