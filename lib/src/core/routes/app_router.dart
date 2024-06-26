@@ -40,6 +40,18 @@ final class AppRouter {
           ),
         ],
       ),
+      GoRoute(
+        path: AppRouteName.registerPage,
+        builder: (BuildContext context, GoRouterState state) =>
+            const RegisterPage(),
+        routes: [
+          GoRoute(
+            path: AppRouteName.otpPage,
+            builder: (BuildContext context, GoRouterState state) =>
+                const OtpPage(),
+          ),
+        ],
+      ),
     ],
   );
 }

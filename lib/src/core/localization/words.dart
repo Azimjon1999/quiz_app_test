@@ -7,6 +7,7 @@ extension MyWords on Words {
 }
 
 enum Words {
+ welcome,
  Quiz,
   First,
   Uzbek,
@@ -48,12 +49,4 @@ enum Words {
  GameWillstartafter3seconds,
  Youwin,
  Youlose,
-
-
-
-
-
-
-
-
 }
