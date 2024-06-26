@@ -7,6 +7,53 @@ extension MyWords on Words {
 }
 
 enum Words {
-  homeMainWord,
-  welcome
+ Quiz,
+  First,
+  Uzbek,
+  English,
+  Russian,
+  EmailAdress,
+  Password,
+  ForgotPassword,
+  Login,
+  Donthaveanaccount,
+  ConfirmPassword,
+  Register,
+  Alreadyhaveaccount,
+  VerifiCode,
+  QuizFirstCheckEmailAdress,
+  Lanuage,
+  ChangeInfo,
+  LogOut,
+  Player,
+  Multiplayer,
+  Wins,
+  Lost,
+  Histories,
+  Leaderboard,
+  UserName,
+  Update,
+  ChooseQuiz,
+  Quations,
+  GREAT,
+  STATISTICS,
+  Yourscore,
+  CorrectAnswer,
+  IncorrectAnswer,
+  YourID,
+  PlayNow,
+  Searchingforcounter,
+ Waitforhimtoaccept,
+ GetReady,
+ GameWillstartafter3seconds,
+ Youwin,
+ Youlose,
+
+
+
+
+
+
+
+
 }
