@@ -21,7 +21,7 @@ class MyTextField extends StatelessWidget {
     return CustomBoxWidget(
       width: double.infinity,
       height: 64,
-      padding: const EdgeInsets.symmetric(horizontal: 34, vertical: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
       child: TextFormField(
         // validator: validator,
         keyboardType: type,
@@ -31,6 +31,7 @@ class MyTextField extends StatelessWidget {
           FocusScope.of(context).nextFocus();
         },
         style: const TextStyle(
+          fontSize: 14,
           fontFamily: 'IrishGrover',
         ),
         decoration: InputDecoration(

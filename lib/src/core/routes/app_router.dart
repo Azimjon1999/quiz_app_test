@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 import "package:go_router/go_router.dart";
 import "package:quiz_app/src/feature/auth/presentation/pages/login_page.dart";
 import "package:quiz_app/src/feature/auth/presentation/pages/otp_page.dart";
-import "package:quiz_app/src/feature/auth/presentation/pages/register_pae.dart";
+import "package:quiz_app/src/feature/auth/presentation/pages/register_page.dart";
 import "package:quiz_app/src/feature/home/presentation/pages/home_page.dart";
 import "../../feature/splash/presentation/pages/splash_page.dart";
 import "app_route_name.dart";

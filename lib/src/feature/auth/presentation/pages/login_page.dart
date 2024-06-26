@@ -1,12 +1,15 @@
+import "dart:developer";
+
 import "package:flutter/material.dart";
-import "package:go_router/go_router.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:provider/provider.dart";
-import "package:quiz_app/src/core/routes/app_route_name.dart";
 import "package:quiz_app/src/core/style/colors.dart";
 import "package:quiz_app/src/core/widget/app_title_widget.dart";
 import "package:quiz_app/src/core/widget/custom_button_widget.dart";
 import "package:quiz_app/src/core/widget/my_textfield_widget.dart";
 import "package:quiz_app/src/feature/auth/controller/auth_controller.dart";
+import "package:quiz_app/src/feature/auth/presentation/widgets/login_botton_text_widget.dart";
+import "package:quiz_app/src/feature/auth/presentation/widgets/login_forgot_text_widget.dart";
 
 import "../../../../core/widget/scaffold_with_background_widget.dart";
 
@@ -24,35 +27,26 @@ class LoginPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 54),
             child: Column(
               children: [
-                const SizedBox(height: 190),
+                SizedBox(height: 170.h),
                 const AppTitleWidget(),
-                const SizedBox(height: 55),
+                SizedBox(height: 50.h),
                 MyTextField(
                   controller: provider.emailC,
                   text: 'Email Adress',
                   type: TextInputType.emailAddress,
                 ),
-                const SizedBox(height: 26),
+                SizedBox(height: 20.h),
                 MyTextField(
                   controller: provider.passC,
                   text: 'Password',
                 ),
-                const SizedBox(height: 12),
-                const SizedBox(
-                  width: double.infinity,
-                  child: Text(
-                    textAlign: TextAlign.right,
-                    'Forgot Password?',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: AppColors.white,
-                      fontFamily: 'IrishGrover',
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 18),
+                SizedBox(height: 10.h),
+                LoginForgotTextWidget(onTap: () {
+                  log('Forgot');
+                }),
+                SizedBox(height: 16.h),
                 CustomButtonWidget(
-                  func: () {},
+                  func: () => provider.navigateToHome(context),
                   child: const Text(
                     'LogIn',
                     style: TextStyle(
@@ -62,20 +56,10 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 28),
-                InkWell(
-                  onTap: () {
-                    context.go(AppRouteName.registerPage);
-                  },
-                  child: const Text(
-                    'Don’t have an account ?',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: AppColors.white,
-                      fontFamily: 'IrishGrover',
-                    ),
-                  ),
-                ),
+                SizedBox(height: 24.h),
+                LoginBottonTextWidget(
+                  onTap: () => provider.navigateToRegister(context),
+                )
               ],
             ),
           ),

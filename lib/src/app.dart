@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:provider/provider.dart";
 import "package:quiz_app/src/feature/auth/controller/auth_controller.dart";
+import "package:quiz_app/src/feature/home/controller/home_controller.dart";
 import "core/widget/app_material_context.dart";
 
 class App extends StatelessWidget {
@@ -12,7 +13,10 @@ class App extends StatelessWidget {
           providers: [
             ChangeNotifierProvider(
               create: (context) => AuthController(),
-            )
+            ),
+            ChangeNotifierProvider(
+              create: (context) => HomeController(),
+            ),
           ],
           child: const App(),
         ),
