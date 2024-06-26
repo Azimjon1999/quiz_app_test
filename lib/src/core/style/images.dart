@@ -14,12 +14,64 @@ sealed class AppImages {
     fit: BoxFit.cover,
   );
 
+  static final SvgPicture close = SvgPicture.asset(
+    "assets/images/close.svg",
+    height: 30.h,
+    width: 30.w,
+    fit: BoxFit.cover,
+  );
 
+  static final SvgPicture back = SvgPicture.asset(
+    "assets/images/down.svg",
+    height: 30.h,
+    width: 30.w,
+    fit: BoxFit.cover,
+  );
+
+  static final SvgPicture loseIcon = SvgPicture.asset(
+    "assets/images/lose.svg",
+    height: 110.h,
+    width: 110.w,
+    fit: BoxFit.cover,
+  );
+
+  static final SvgPicture winIcon = SvgPicture.asset(
+    "assets/images/win.svg",
+    height: 130.h,
+    width: 130.w,
+    fit: BoxFit.cover,
+  );
+
+  static final SvgPicture menuIcon = SvgPicture.asset(
+    "assets/images/menu.svg",
+    height: 30.h,
+    width: 30.w,
+    fit: BoxFit.cover,
+  );
+
+  static final SvgPicture starIcon = SvgPicture.asset(
+    "assets/images/star.svg",
+    height: 23.h,
+    width: 23.w,
+    fit: BoxFit.cover,
+  );
+
+  static final SvgPicture userIcon = SvgPicture.asset(
+    "assets/images/user_circler.svg",
+    height: 30.h,
+    width: 30.w,
+    fit: BoxFit.cover,
+  );
+
+  static final SvgPicture userBlueIcon = SvgPicture.asset(
+    "assets/images/user_circle_blue.svg",
+    height: 80.h,
+    width: 80.w,
+    fit: BoxFit.cover,
+  );
 
   /// PNG
   ///
-
-
 
   static final Image someImage = Image.asset(
     "assets/images/background_image.png",
