@@ -63,6 +63,12 @@ sealed class AppImages {
     fit: BoxFit.cover,
   );
 
+  static final SvgPicture userIcon2 = SvgPicture.asset(
+    "assets/images/user_circler.svg",
+    height: 60.h,
+    width: 60.w,
+    fit: BoxFit.cover,
+  );
   static final SvgPicture userIcon = SvgPicture.asset(
     "assets/images/user_circler.svg",
     height: 50.h,
