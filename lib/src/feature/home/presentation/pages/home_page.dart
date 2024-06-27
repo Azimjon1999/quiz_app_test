@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
+import 'package:quiz_app/src/core/routes/app_route_name.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/style/images.dart';
 import 'package:quiz_app/src/core/widget/app_title_widget.dart';
@@ -19,8 +21,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       key: provider.scaffoldKey,
       drawer: HomeDrawerWidget(
-        languageOnTap: () {},
-        chahgeInfoOnTap: () {
+        languageOnTap: () {
           showModalBottomSheet(
             context: context,
             builder: (context) {
@@ -39,6 +40,9 @@ class HomePage extends StatelessWidget {
             },
           );
         },
+        chahgeInfoOnTap: () {
+          context.go('${AppRouteName.homePage}${AppRouteName.updateInfoPage}');
+        },
         logOutOnTap: () {},
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -52,7 +56,7 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 32),
           child: Column(
             children: [
-              const SizedBox(height: 46),
+               SizedBox(height: 46.h),
               Container(
                 width: double.infinity,
                 alignment: Alignment.centerLeft,
@@ -98,12 +102,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    // const SizedBox(height: 80),
-                    // CustomButtonWidget(
-                    //   witdh: 130,
-                    //   func: () {},
-                    //   child: AppImages.userIcon,
-                    // ),
+                    
                   ],
                 ),
               ),
