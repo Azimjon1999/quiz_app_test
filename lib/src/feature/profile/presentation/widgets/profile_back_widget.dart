@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/style/images.dart';
@@ -15,7 +13,8 @@ class ProfileBackWidget extends StatelessWidget {
       children: [
        CustomButtonWidget(
            func: (){
-             log("back");
+             // con;
+
            },
            height: 60,
          witdh: 68,

@@ -29,4 +29,12 @@ class AuthController extends ChangeNotifier {
   void navigateToHome(BuildContext context) {
     context.go(AppRouteName.homePage);
   }
+
+  void navigateToForgotPassword(BuildContext context) {
+    context.go("${AppRouteName.loginPage}/${AppRouteName.forgetPassword}");
+  }
+
+  void navigateToOtpForgotPassword(BuildContext context) {
+    context.go('${AppRouteName.loginPage}/${AppRouteName.forgetPassword}/${AppRouteName.otpForgetPage}');
+  }
 }

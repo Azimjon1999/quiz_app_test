@@ -83,7 +83,7 @@ sealed class AppImages {
   );
 
 
- 
+
 
   /// PNG
   ///

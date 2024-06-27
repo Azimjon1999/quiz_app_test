@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: CustomButtonWidget(
         witdh: 130,
-        func: () {},
+        func: () => provider.navigateToProfile(context),
         child: AppImages.userIcon,
       ),
       body: ScaffoldWithBackgroundWidget(
