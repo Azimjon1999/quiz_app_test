@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quiz_app/src/feature/profile/presentation/widgets/profile_listtitle_widget.dart';
 import '../../../../core/style/colors.dart';
-import '../../../../core/widget/custom_box_big_widget.dart';
 
 class ProfileReytingWidget extends StatelessWidget {
   ProfileReytingWidget({

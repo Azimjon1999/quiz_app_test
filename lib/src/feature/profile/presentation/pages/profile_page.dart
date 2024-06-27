@@ -3,11 +3,9 @@ import "package:go_router/go_router.dart";
 import "package:quiz_app/src/core/routes/app_route_name.dart";
 import "package:quiz_app/src/core/style/colors.dart";
 import "package:quiz_app/src/core/widget/appbar_leading_widget.dart";
-import "package:quiz_app/src/feature/profile/presentation/widgets/profile_back_widget.dart";
 import "package:quiz_app/src/feature/profile/presentation/widgets/profile_category_widget.dart";
 import "package:quiz_app/src/feature/profile/presentation/widgets/profile_image_widget.dart";
 import "package:quiz_app/src/feature/profile/presentation/widgets/profile_pageview_widget.dart";
-import "package:quiz_app/src/feature/profile/presentation/widgets/profile_reyting_widget.dart";
 import "package:quiz_app/src/feature/profile/presentation/widgets/profile_userresult_widget.dart";
 
 import "../../../../core/widget/scaffold_with_background_widget.dart";
