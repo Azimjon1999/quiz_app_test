@@ -11,4 +11,6 @@ final class AppRouteName {
   static const String otpPage = "otp_page";
   static const String homePage = "/";
   static const String updateInfoPage = 'updatePage';
+  static const String profilePage = "/profile_page";
+
 }
