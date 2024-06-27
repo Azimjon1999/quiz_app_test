@@ -1,8 +1,10 @@
 import "package:flutter/material.dart";
+import "package:flutter/widgets.dart";
 import "package:go_router/go_router.dart";
 import "package:quiz_app/setup.dart";
 import "package:quiz_app/src/core/routes/app_route_name.dart";
 import "package:quiz_app/src/core/style/colors.dart";
+import "package:quiz_app/src/core/style/images.dart";
 import "package:quiz_app/src/core/widget/app_title_widget.dart";
 
 import "../../../../core/widget/scaffold_with_background_widget.dart";
@@ -38,9 +40,15 @@ class _SplashPageState extends State<SplashPage> {
       appBar: AppBar(
         backgroundColor: AppColors.transparent,
       ),
-      body: const ScaffoldWithBackgroundWidget(
+      body: ScaffoldWithBackgroundWidget(
         child: Center(
-          child: AppTitleWidget(),
+          child: AnimatedContainer(
+            height: 175,
+            width: 290,
+            duration: const Duration(seconds: 1),
+            child: const AppTitleWidget(),
+            // child: AppImages.userIcon,
+          ),
         ),
       ),
     );

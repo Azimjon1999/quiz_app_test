@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 
 class CustomBoxWidget extends StatelessWidget {
@@ -9,6 +8,7 @@ class CustomBoxWidget extends StatelessWidget {
   final double height;
   final Color backgroundColor;
   final EdgeInsets padding;
+  final double blurRadius;
   const CustomBoxWidget({
     super.key,
     this.width = 300,
@@ -16,6 +16,7 @@ class CustomBoxWidget extends StatelessWidget {
     required this.child,
     this.backgroundColor = AppColors.white,
     this.padding = EdgeInsets.zero,
+    this.blurRadius = 20,
   });
 
   @override
@@ -31,7 +32,7 @@ class CustomBoxWidget extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: AppColors.black.withOpacity(0.5),
-            blurRadius: 20,
+            blurRadius: blurRadius,
             offset: const Offset(2, 5),
           ),
         ],

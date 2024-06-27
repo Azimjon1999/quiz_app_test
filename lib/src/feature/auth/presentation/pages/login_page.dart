@@ -22,22 +22,10 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       // resizeToAvoidBottomInset: false,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: CustomButtonWidget(
-        witdh: MediaQuery.of(context).size.width * 0.75,
-        func: () => provider.navigateToHome(context),
-        child: const Text(
-          'LogIn',
-          style: TextStyle(
-            fontSize: 30,
-            color: AppColors.white,
-            fontFamily: 'IrishGrover',
-          ),
-        ),
-      ),
       body: ScaffoldWithBackgroundWidget(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 54),
+            padding: const EdgeInsets.symmetric(horizontal: 34),
             child: Column(
               children: [
                 SizedBox(height: 170.h),
@@ -58,6 +46,18 @@ class LoginPage extends StatelessWidget {
                   log('Forgot');
                 }),
                 SizedBox(height: 16.h),
+                CustomButtonWidget(
+                  // witdh: MediaQuery.of(context).size.width * 0.75,
+                  func: () => provider.navigateToHome(context),
+                  child: const Text(
+                    'LogIn',
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: AppColors.white,
+                      fontFamily: 'IrishGrover',
+                    ),
+                  ),
+                ),
                 SizedBox(height: 24.h),
                 LoginBottonTextWidget(
                   onTap: () => provider.navigateToRegister(context),

@@ -5,6 +5,7 @@ import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/style/images.dart';
 import 'package:quiz_app/src/core/widget/app_title_widget.dart';
 import 'package:quiz_app/src/core/widget/custom_button_widget.dart';
+import 'package:quiz_app/src/core/widget/language_widget.dart';
 import 'package:quiz_app/src/core/widget/scaffold_with_background_widget.dart';
 import 'package:quiz_app/src/feature/home/controller/home_controller.dart';
 import 'package:quiz_app/src/feature/home/presentation/widgets/home_drawer_widget.dart';
@@ -19,8 +20,32 @@ class HomePage extends StatelessWidget {
       key: provider.scaffoldKey,
       drawer: HomeDrawerWidget(
         languageOnTap: () {},
-        chahgeInfoOnTap: () {},
+        chahgeInfoOnTap: () {
+          showModalBottomSheet(
+            context: context,
+            builder: (context) {
+              return Container(
+                alignment: Alignment.center,
+                height: 310.h,
+                padding: const EdgeInsets.symmetric(horizontal: 34),
+                child: Center(
+                  child: LanguagesWidget(
+                    uzbekOnTap: () {},
+                    russinOnTap: () {},
+                    englishOnTap: () {},
+                  ),
+                ),
+              );
+            },
+          );
+        },
         logOutOnTap: () {},
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: CustomButtonWidget(
+        witdh: 130,
+        func: () {},
+        child: AppImages.userIcon,
       ),
       body: ScaffoldWithBackgroundWidget(
         child: Padding(
@@ -73,12 +98,12 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 80),
-                    CustomButtonWidget(
-                      witdh: 130,
-                      func: () {},
-                      child: AppImages.userIcon,
-                    ),
+                    // const SizedBox(height: 80),
+                    // CustomButtonWidget(
+                    //   witdh: 130,
+                    //   func: () {},
+                    //   child: AppImages.userIcon,
+                    // ),
                   ],
                 ),
               ),

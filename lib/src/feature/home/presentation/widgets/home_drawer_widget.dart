@@ -16,6 +16,7 @@ class HomeDrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
@@ -47,49 +48,60 @@ class HomeDrawerWidget extends StatelessWidget {
               height: 1,
               color: AppColors.c7A7A7A,
             ),
-            const SizedBox(height: 18),
-            InkWell(
-              onTap: languageOnTap,
-              child: const Text(
-                'Language',
-                style: TextStyle(
-                  fontSize: 25,
-                  fontFamily: 'IrishGrover',
-                  color: AppColors.c0048B5,
+            const SizedBox(height: 10),
+            MaterialButton(
+              onPressed: languageOnTap,
+              minWidth: double.infinity,
+              child: const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Language',
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontFamily: 'IrishGrover',
+                    color: AppColors.c0048B5,
+                  ),
                 ),
               ),
             ),
-            const SizedBox(height: 18),
+            const SizedBox(height: 10),
             const Divider(
               height: 1,
               color: AppColors.c7A7A7A,
             ),
-            const SizedBox(height: 18),
-            InkWell(
-              onTap: chahgeInfoOnTap,
-              child: const Text(
-                'Change Info',
-                style: TextStyle(
-                  fontSize: 25,
-                  fontFamily: 'IrishGrover',
-                  color: AppColors.c0048B5,
+            const SizedBox(height: 10),
+            MaterialButton(
+              onPressed: chahgeInfoOnTap,
+              child: const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Change Info',
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontFamily: 'IrishGrover',
+                    color: AppColors.c0048B5,
+                  ),
                 ),
               ),
             ),
-            const SizedBox(height: 18),
+            const SizedBox(height: 10),
             const Divider(
               height: 1,
               color: AppColors.c7A7A7A,
             ),
             const SizedBox(height: 340),
-            InkWell(
-              onTap: logOutOnTap,
-              child: const Text(
-                'Log Out',
-                style: TextStyle(
-                  fontSize: 25,
-                  fontFamily: 'IrishGrover',
-                  color: AppColors.cFE3340,
+            MaterialButton(
+              onPressed: logOutOnTap,
+              child: const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Log Out',
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontFamily: 'IrishGrover',
+                    color: AppColors.cFE3340,
+                  ),
                 ),
               ),
             ),

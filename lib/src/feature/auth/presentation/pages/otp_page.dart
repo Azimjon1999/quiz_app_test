@@ -22,7 +22,7 @@ class OtpPage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: ScaffoldWithBackgroundWidget(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: SingleChildScrollView(
             reverse: false,
             child: Column(
@@ -34,7 +34,7 @@ class OtpPage extends StatelessWidget {
                   },
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 22),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Column(
                     children: [
                       SizedBox(height: 86.h),
