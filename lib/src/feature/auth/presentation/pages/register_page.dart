@@ -1,12 +1,12 @@
 import "package:flutter/material.dart";
-import "package:go_router/go_router.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:provider/provider.dart";
-import "package:quiz_app/src/core/routes/app_route_name.dart";
 import "package:quiz_app/src/core/style/colors.dart";
 import "package:quiz_app/src/core/widget/app_title_widget.dart";
 import "package:quiz_app/src/core/widget/custom_button_widget.dart";
 import "package:quiz_app/src/core/widget/my_textfield_widget.dart";
 import "package:quiz_app/src/feature/auth/controller/auth_controller.dart";
+import "package:quiz_app/src/feature/auth/presentation/widgets/register_bottom_text_widget.dart";
 
 import "../../../../core/widget/scaffold_with_background_widget.dart";
 
@@ -24,31 +24,30 @@ class RegisterPage extends StatelessWidget {
           const ScaffoldWithBackgroundWidget(child: SizedBox.expand()),
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 54),
+              padding: const EdgeInsets.symmetric(horizontal: 34),
               child: Column(
                 children: [
-                  const SizedBox(height: 190),
+                  SizedBox(height: 170.h),
                   const AppTitleWidget(),
-                  const SizedBox(height: 55),
+                  SizedBox(height: 50.h),
                   MyTextField(
                     text: 'Email Adress',
                     controller: provider.emailC,
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 20.h),
                   MyTextField(
                     text: 'Password',
                     controller: provider.passC,
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: 20.h),
                   MyTextField(
                     text: 'Confirm Password',
                     controller: provider.confirmC,
                   ),
-                  const SizedBox(height: 30),
+                  SizedBox(height: 20.h),
                   CustomButtonWidget(
-                    func: () {
-                      context.go('${AppRouteName.registerPage}/${AppRouteName.otpPage}');
-                    },
+                    // witdh: double.infinity,
+                    func: () => provider.navigateToOtp(context),
                     child: const Text(
                       'Register',
                       style: TextStyle(
@@ -58,19 +57,9 @@ class RegisterPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 28),
-                  InkWell(
-                    onTap: () {
-                      context.go(AppRouteName.loginPage);
-                    },
-                    child: const Text(
-                      'Already have account ?',
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: AppColors.white,
-                        fontFamily: 'IrishGrover',
-                      ),
-                    ),
+                  SizedBox(height: 24.h),
+                  RegisterBottomTextWidget(
+                    onTap: () => provider.navigateToLogin(context),
                   ),
                 ],
               ),

@@ -7,17 +7,39 @@ sealed class AppImages {
   const AppImages._();
 
   ///  SVG
-  static final SvgPicture categoryArrowBackIcon = SvgPicture.asset(
-    "assets/icons/ic_arrow_back.svg",
-    height: 24.h,
-    width: 24.w,
-    fit: BoxFit.cover,
-  );
 
   static final SvgPicture close = SvgPicture.asset(
     "assets/images/close.svg",
     height: 30.h,
     width: 30.w,
+    fit: BoxFit.cover,
+  );
+
+  static final SvgPicture back = SvgPicture.asset(
+    "assets/images/vector.svg",
+    height: 30.h,
+    width: 30.w,
+    fit: BoxFit.cover,
+  );
+
+  static final SvgPicture menuIcon = SvgPicture.asset(
+    "assets/images/menu_icon.svg",
+    height: 40.h,
+    width: 40.w,
+    fit: BoxFit.cover,
+  );
+
+  static final SvgPicture userIcon = SvgPicture.asset(
+    "assets/images/user_circler.svg",
+    height: 50.h,
+    width: 50.w,
+    fit: BoxFit.cover,
+  );
+
+  static final SvgPicture userBlueIcon = SvgPicture.asset(
+    "assets/images/user_circle_blue.svg",
+    height: 80.h,
+    width: 80.w,
     fit: BoxFit.cover,
   );
 

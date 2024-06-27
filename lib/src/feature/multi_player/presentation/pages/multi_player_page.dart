@@ -15,13 +15,7 @@ class SplashPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.transparent,
       ),
-      body: ScaffoldWithBackgroundWidget(
-        child: Center(
-          child: Text(
-            Words.welcome.tr(context),
-          ),
-        ),
-      ),
+
     );
   }
 }

@@ -1,12 +1,10 @@
-import "dart:developer";
-
 import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:go_router/go_router.dart";
 import "package:provider/provider.dart";
-import "package:quiz_app/src/core/routes/app_route_name.dart";
 import "package:quiz_app/src/core/style/colors.dart";
-import "package:quiz_app/src/core/style/images.dart";
 import "package:quiz_app/src/core/widget/app_title_widget.dart";
+import "package:quiz_app/src/core/widget/appbar_leading_widget.dart";
 import "package:quiz_app/src/core/widget/custom_button_widget.dart";
 import "package:quiz_app/src/feature/auth/controller/auth_controller.dart";
 import "package:quiz_app/src/feature/auth/presentation/widgets/otp_pin_code_widget.dart";
@@ -24,50 +22,40 @@ class OtpPage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: ScaffoldWithBackgroundWidget(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: SingleChildScrollView(
             reverse: false,
             child: Column(
               children: [
                 const SizedBox(height: 50),
-                Container(
-                  width: double.infinity,
-                  alignment: Alignment.centerLeft,
-                  child: CustomButtonWidget(
-                    witdh: 68,
-                    height: 60,
-                    func: () {
-                      context.pop();
-                    },
-                    buttonColor: AppColors.white,
-                    child: AppImages.back,
-                  ),
+                AppbarLeadingWidget(
+                  func: () {
+                    context.pop();
+                  },
                 ),
-                const SizedBox(height: 88),
-                const AppTitleWidget(),
-                const SizedBox(height: 70),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 22),
-                  child: OtpPinCodeWidget(
-                    otp: provider.otp,
-                  ),
-                ),
-                const SizedBox(height: 200),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 22),
-                  child: CustomButtonWidget(
-                    func: () {
-                      log(provider.otp.text);
-                      context.go(AppRouteName.homePage);
-                    },
-                    child: const Text(
-                      'Verifi Code',
-                      style: TextStyle(
-                        fontSize: 30,
-                        color: AppColors.white,
-                        fontFamily: 'IrishGrover',
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 86.h),
+                      const AppTitleWidget(),
+                      SizedBox(height: 68.h),
+                      OtpPinCodeWidget(
+                        otp: provider.otp,
                       ),
-                    ),
+                      SizedBox(height: 196.h),
+                      CustomButtonWidget(
+                        func: () => provider.navigateToHome(context),
+                        child: const Text(
+                          'Verifi Code',
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: AppColors.white,
+                            fontFamily: 'IrishGrover',
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
