@@ -20,7 +20,20 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<AuthController>(context);
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      // resizeToAvoidBottomInset: false,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: CustomButtonWidget(
+        witdh: MediaQuery.of(context).size.width * 0.75,
+        func: () => provider.navigateToHome(context),
+        child: const Text(
+          'LogIn',
+          style: TextStyle(
+            fontSize: 30,
+            color: AppColors.white,
+            fontFamily: 'IrishGrover',
+          ),
+        ),
+      ),
       body: ScaffoldWithBackgroundWidget(
         child: SingleChildScrollView(
           child: Padding(
@@ -45,17 +58,6 @@ class LoginPage extends StatelessWidget {
                   log('Forgot');
                 }),
                 SizedBox(height: 16.h),
-                CustomButtonWidget(
-                  func: () => provider.navigateToHome(context),
-                  child: const Text(
-                    'LogIn',
-                    style: TextStyle(
-                      fontSize: 30,
-                      color: AppColors.white,
-                      fontFamily: 'IrishGrover',
-                    ),
-                  ),
-                ),
                 SizedBox(height: 24.h),
                 LoginBottonTextWidget(
                   onTap: () => provider.navigateToRegister(context),

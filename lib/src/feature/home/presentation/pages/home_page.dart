@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
                     provider.openDrawer();
                   },
                   buttonColor: AppColors.white,
-                  child: AppImages.loseIcon,
+                  child: AppImages.menuIcon,
                 ),
               ),
               Padding(

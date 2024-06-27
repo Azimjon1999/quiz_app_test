@@ -12,26 +12,31 @@ class AppTitleWidget extends StatelessWidget {
     return CustomBoxWidget(
       height: 175.h,
       width: 290.w,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'Quiz',
-            style: TextStyle(
-              fontSize: 75.h,
-              color: AppColors.c0048B5,
-              fontFamily: 'IrishGrover',
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Expanded(
+              child: Text(
+                'Quiz',
+                style: TextStyle(
+                  fontSize: 90.sp,
+                  color: AppColors.c0048B5,
+                  fontFamily: 'IrishGrover',
+                ),
+              ),
             ),
-          ),
-          Text(
-            'First',
-            style: TextStyle(
-              fontSize: 45.h,
-              color: AppColors.c0048B5,
-              fontFamily: 'IrishGrover',
+            Text(
+              'First',
+              style: TextStyle(
+                fontSize: 45.sp,
+                color: AppColors.c0048B5,
+                fontFamily: 'IrishGrover',
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

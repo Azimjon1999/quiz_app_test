@@ -24,7 +24,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ScreenUtilInit(
-        designSize: const Size(360, 800),
+        designSize: const Size(450, 932),
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (BuildContext context, Widget? child) => AppMaterialContext(),

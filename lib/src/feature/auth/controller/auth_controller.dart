@@ -9,10 +9,16 @@ class AuthController extends ChangeNotifier {
   TextEditingController otp = TextEditingController();
 
   void navigateToLogin(BuildContext context) {
+    emailC.clear();
+    passC.clear();
+    confirmC.clear();
     context.go(AppRouteName.loginPage);
   }
 
   void navigateToRegister(BuildContext context) {
+    emailC.clear();
+    passC.clear();
+    confirmC.clear();
     context.go(AppRouteName.registerPage);
   }
 
