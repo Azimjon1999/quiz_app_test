@@ -98,8 +98,8 @@ final class FontSize {
   static double size50 = 50.sp;
   static double size36 = 36.sp;
   static double size16 = 16.sp;
-  static double size40 = 40.sp;
   static double size30 = 30.sp;
   static double size22 = 22.sp;
   static double size24 = 24.sp;
+  static double size40 = 40.sp;
 }

@@ -5,9 +5,7 @@ import "package:quiz_app/src/feature/profile/presentation/widgets/profile_catego
 import "package:quiz_app/src/feature/profile/presentation/widgets/profile_image_widget.dart";
 import "package:quiz_app/src/feature/profile/presentation/widgets/profile_reyting_widget.dart";
 import "package:quiz_app/src/feature/profile/presentation/widgets/profile_userresult_widget.dart";
-
 import "../../../../core/widget/scaffold_with_background_widget.dart";
-import "../widgets/profile_history_widget.dart";
 
 class ProfilePage extends StatelessWidget {
 

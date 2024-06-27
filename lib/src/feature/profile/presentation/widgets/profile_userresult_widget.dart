@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/src/core/localization/words.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
-import 'package:quiz_app/src/core/style/text_style.dart';
 import 'package:quiz_app/src/core/widget/custom_box_widget.dart';
 
-import '../../../../core/widget/custom_box_big_widget.dart';
 
 class ProfileUserResultWidget extends StatelessWidget {
   const ProfileUserResultWidget({super.key});
