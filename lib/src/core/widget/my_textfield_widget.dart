@@ -6,14 +6,12 @@ class MyTextField extends StatelessWidget {
   final TextEditingController controller;
   final String text;
   final TextInputType type;
-  // final String? Function(String?)? validator;
 
   const MyTextField({
     super.key,
     required this.text,
     required this.controller,
     this.type = TextInputType.text,
-    // required this.validator,
   });
 
   @override
@@ -23,7 +21,6 @@ class MyTextField extends StatelessWidget {
       height: 64,
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
       child: TextFormField(
-        // validator: validator,
         keyboardType: type,
         cursorColor: AppColors.c7A7A7A,
         controller: controller,

@@ -19,8 +19,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       key: provider.scaffoldKey,
       drawer: HomeDrawerWidget(
-        languageOnTap: () {},
-        chahgeInfoOnTap: () {
+        languageOnTap: () {
           showModalBottomSheet(
             context: context,
             builder: (context) {
@@ -39,6 +38,9 @@ class HomePage extends StatelessWidget {
             },
           );
         },
+        chahgeInfoOnTap: () {
+          context.go('${AppRouteName.homePage}${AppRouteName.updateInfoPage}');
+        },
         logOutOnTap: () {},
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -52,7 +54,7 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 32),
           child: Column(
             children: [
-              const SizedBox(height: 46),
+               SizedBox(height: 46.h),
               Container(
                 width: double.infinity,
                 alignment: Alignment.centerLeft,
