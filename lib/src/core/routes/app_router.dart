@@ -5,6 +5,7 @@ import "package:quiz_app/src/feature/auth/presentation/pages/otp_page.dart";
 import "package:quiz_app/src/feature/auth/presentation/pages/register_page.dart";
 import "package:quiz_app/src/feature/choose_language/presentation/pages/choose_language_page.dart";
 import "package:quiz_app/src/feature/home/presentation/pages/home_page.dart";
+import "package:quiz_app/src/feature/single_player/presentation/pages/single_player_page.dart";
 import "package:quiz_app/src/feature/updateInfo/presemtation/pages/update_info_page.dart";
 import "../../feature/splash/presentation/pages/splash_page.dart";
 import "app_route_name.dart";
@@ -54,7 +55,11 @@ final class AppRouter {
           GoRoute(
             path: AppRouteName.updateInfoPage,
             builder: (context, state) => const UpdateInfoPage(),
-          )
+          ),
+          GoRoute(
+            path: AppRouteName.singlePlayerPage,
+            builder: (context, state) => const SinglePlayerPage(),
+          ),
         ],
       ),
     ],
