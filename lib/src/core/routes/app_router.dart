@@ -1,16 +1,20 @@
 import "package:flutter/material.dart";
 import "package:go_router/go_router.dart";
+import "package:quiz_app/src/feature/auth/presentation/pages/forget_otp_page.dart";
+import "package:quiz_app/src/feature/auth/presentation/pages/forget_password_page.dart";
 import "package:quiz_app/src/feature/auth/presentation/pages/login_page.dart";
+import "package:quiz_app/src/feature/auth/presentation/pages/new_password_cread_page.dart";
 import "package:quiz_app/src/feature/auth/presentation/pages/otp_page.dart";
 import "package:quiz_app/src/feature/auth/presentation/pages/register_page.dart";
 import "package:quiz_app/src/feature/choose_language/presentation/pages/choose_language_page.dart";
 import "package:quiz_app/src/feature/home/presentation/pages/home_page.dart";
+import "package:quiz_app/src/feature/profile/presentation/pages/profile_page.dart";
 import "../../feature/splash/presentation/pages/splash_page.dart";
 import "app_route_name.dart";
 
 final class AppRouter {
   static GoRouter router = GoRouter(
-    initialLocation: AppRouteName.homePage,
+    initialLocation: AppRouteName.loginPage,
     debugLogDiagnostics: true,
     routes: <RouteBase>[
       GoRoute(
@@ -30,6 +34,27 @@ final class AppRouter {
         path: AppRouteName.loginPage,
         builder: (BuildContext context, GoRouterState state) =>
             const LoginPage(),
+        routes: [
+          GoRoute(
+            path: AppRouteName.forgetPassword,
+            builder: (BuildContext context, GoRouterState state) =>
+                const ForgetPasswordPage(),
+            routes: [
+              GoRoute(
+                path: AppRouteName.otpForgetPage,
+                builder: (BuildContext context, GoRouterState state) =>
+                const OtpForgetPage(),
+              ),
+            ]
+          ),
+
+
+        ],
+      ),
+      GoRoute(
+        path: AppRouteName.nemPasswordPage,
+        builder: (BuildContext context, GoRouterState state) =>
+        const NewPasswordCreadPage(),
       ),
       GoRoute(
         path: AppRouteName.registerPage,
@@ -49,7 +74,15 @@ final class AppRouter {
         path: AppRouteName.homePage,
         builder: (BuildContext context, GoRouterState state) =>
             const HomePage(),
+
+        routes: [
+
+        ],
       ),
+      GoRoute(
+          path: AppRouteName.profilePage,
+        builder: (BuildContext context, GoRouterState state) => const ProfilePage(),
+      )
     ],
   );
 }

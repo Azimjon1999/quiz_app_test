@@ -1,19 +1,15 @@
 import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
-import "package:go_router/go_router.dart";
 import "package:provider/provider.dart";
-import "package:quiz_app/src/core/routes/app_route_name.dart";
 import "package:quiz_app/src/core/style/colors.dart";
 import "package:quiz_app/src/core/widget/app_title_widget.dart";
 import "package:quiz_app/src/core/widget/custom_button_widget.dart";
 import "package:quiz_app/src/core/widget/my_textfield_widget.dart";
 import "package:quiz_app/src/feature/auth/controller/auth_controller.dart";
-import "package:quiz_app/src/feature/auth/presentation/widgets/login_botton_text_widget.dart";
-import "package:quiz_app/src/feature/auth/presentation/widgets/login_forgot_text_widget.dart";
 import "../../../../core/widget/scaffold_with_background_widget.dart";
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class NewPasswordCreadPage extends StatelessWidget {
+  const NewPasswordCreadPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,21 +28,19 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: 50.h),
                 MyTextField(
                   controller: provider.emailC,
-                  text: 'Email Adress',
+                  text: 'New Password',
                   type: TextInputType.emailAddress,
                 ),
                 SizedBox(height: 20.h),
                 MyTextField(
                   controller: provider.passC,
-                  text: 'Password',
+                  text: ' Confirm Password',
                 ),
-                SizedBox(height: 10.h),
-                LoginForgotTextWidget(onTap: () => provider.navigateToForgotPassword(context)),
                 SizedBox(height: 16.h),
                 CustomButtonWidget(
-                  func: () => provider.navigateToHome(context),
+                  func: () => provider.navigateToLogin(context),
                   child: const Text(
-                    'LogIn',
+                    'Confirm',
                     style: TextStyle(
                       fontSize: 30,
                       color: AppColors.white,
@@ -55,9 +49,6 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 24.h),
-                LoginBottonTextWidget(
-                  onTap: () => provider.navigateToRegister(context),
-                )
               ],
             ),
           ),

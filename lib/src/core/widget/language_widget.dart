@@ -80,7 +80,7 @@ class LanguagesWidget extends StatelessWidget {
         ),
         SizedBox(height: 20.h),
         CustomButtonWidget(
-          blurRadius: 16,
+          blurRadius: 16.h,
           padding: const EdgeInsets.symmetric(horizontal: 14),
           witdh: double.infinity,
           height: 66.h,

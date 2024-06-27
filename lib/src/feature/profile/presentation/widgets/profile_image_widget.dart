@@ -15,7 +15,7 @@ class ProfileImageWidget extends StatelessWidget {
           onTap: () {
             log("rasm tanlash");
           },
-          child: AppImages.userIcon2),
+          child: AppImages.userIcon),
     );
   }
 }
