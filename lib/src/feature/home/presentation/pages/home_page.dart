@@ -9,6 +9,8 @@ import 'package:quiz_app/src/core/widget/scaffold_with_background_widget.dart';
 import 'package:quiz_app/src/feature/home/controller/home_controller.dart';
 import 'package:quiz_app/src/feature/home/presentation/widgets/home_drawer_widget.dart';
 
+import '../../../../../generated/assets.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -24,10 +26,10 @@ class HomePage extends StatelessWidget {
       ),
       body: ScaffoldWithBackgroundWidget(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32),
+          padding: EdgeInsets.symmetric(horizontal: 32.h),
           child: Column(
             children: [
-              const SizedBox(height: 46),
+              SizedBox(height: 46.h),
               Container(
                 width: double.infinity,
                 alignment: Alignment.centerLeft,
@@ -38,7 +40,7 @@ class HomePage extends StatelessWidget {
                     provider.openDrawer();
                   },
                   buttonColor: AppColors.white,
-                  child: AppImages.menuIcon,
+                  child: Icon(Icons.menu_rounded, size: 40.w,),
                 ),
               ),
               Padding(
@@ -51,10 +53,10 @@ class HomePage extends StatelessWidget {
                     CustomButtonWidget(
                       buttonColor: AppColors.white,
                       func: () {},
-                      child: const Text(
+                      child: Text(
                         'Single Player',
                         style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 30.sp,
                           color: AppColors.c0048B5,
                           fontFamily: 'IrishGrover',
                         ),

@@ -41,7 +41,7 @@ class AppMaterialContext extends StatelessWidget {
                 restorationScopeId: "material_app",
                 debugShowCheckedModeBanner: false,
                 locale: InheritedLocalNotifier.maybeOf(context)?.appLocal ?? const Locale("uz", "UZ"),
-                supportedLocales: const <Locale>[Locale("uz", "UZ"), Locale("ru", "RU")],
+                supportedLocales: const <Locale>[Locale("uz", "UZ"), Locale("ru", "RU"), Locale("uz", "UZ")],
                 localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
                   AppLocalizations.delegate,
                   GlobalMaterialLocalizations.delegate,

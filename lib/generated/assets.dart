@@ -2,6 +2,19 @@
 class Assets {
   Assets._();
 
+  static const String assetsImagesMenuIcon = 'assets/images/menu_icon.svg';
+  static const String fontsIrishGroverRegular = 'assets/fonts/IrishGrover-Regular.ttf';
+  static const String fontsLICENSE = 'assets/fonts/LICENSE.txt';
+  static const String imagesBackgroundImage = 'assets/images/background_image.png';
+  static const String imagesClose = 'assets/images/close.svg';
+  static const String imagesDown = 'assets/images/down.svg';
+  static const String imagesLose = 'assets/images/lose.svg';
+  static const String imagesMenuIcon = 'assets/images/menu_icon.png';
+  static const String imagesStar = 'assets/images/star.svg';
+  static const String imagesUserCircleBlue = 'assets/images/user_circle_blue.svg';
+  static const String imagesUserCircler = 'assets/images/user_circler.svg';
+  static const String imagesVector = 'assets/images/vector.svg';
+  static const String imagesWin = 'assets/images/win.svg';
   static const String langEn = 'assets/lang/en.json';
   static const String langRu = 'assets/lang/ru.json';
   static const String langUz = 'assets/lang/uz.json';

@@ -25,13 +25,13 @@ class LoginPage extends StatelessWidget {
       floatingActionButton: CustomButtonWidget(
         witdh: MediaQuery.of(context).size.width * 0.75,
         func: () => provider.navigateToHome(context),
-        child: const Text(
+        child: Text(
           'LogIn',
           style: TextStyle(
-            fontSize: 30,
-            color: AppColors.white,
-            fontFamily: 'IrishGrover',
-          ),
+            fontSize: 40.sp,
+            fontWeight: FontWeight.w400,
+            color: AppColors.white
+          )
         ),
       ),
       body: ScaffoldWithBackgroundWidget(

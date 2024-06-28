@@ -2,6 +2,8 @@ import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:flutter_svg/svg.dart";
 
+import "../../../generated/assets.dart";
+
 @immutable
 sealed class AppImages {
   const AppImages._();
@@ -9,7 +11,7 @@ sealed class AppImages {
   ///  SVG
 
   static final SvgPicture close = SvgPicture.asset(
-    "assets/images/close.svg",
+    Assets.imagesClose,
     height: 30.h,
     width: 30.w,
     fit: BoxFit.cover,
