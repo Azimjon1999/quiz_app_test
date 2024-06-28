@@ -32,6 +32,7 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 34),
                 child: Center(
                   child: LanguagesWidget(
+                    shouldGoNext: false,
                     localController: localController,
                   ),
                 ),
@@ -56,7 +57,9 @@ class HomePage extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 46.h),
-              HomeLeadingWidget(onTap: () => provider.openDrawer),
+              HomeLeadingWidget(
+                  onTap: () => provider.openDrawer
+              ),
               HomeBodyWidgets(onTap1: (){}, onTap2: (){},),
             ],
           ),

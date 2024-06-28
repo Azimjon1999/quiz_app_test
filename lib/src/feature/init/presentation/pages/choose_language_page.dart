@@ -25,6 +25,7 @@ class ChooseLanguagePage extends StatelessWidget {
                 height: 66.h,
               ),
               LanguagesWidget(
+                shouldGoNext: true,
                 localController: localController,
               ),
             ],

@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/style/images.dart';
 import 'package:quiz_app/src/core/widget/custom_button_widget.dart';
@@ -18,7 +20,7 @@ class HomeLeadingWidget extends StatelessWidget {
         height: 60,
         func: onTap,
         buttonColor: AppColors.white,
-        child: AppImages.menuIcon,
+        child: Icon(Icons.menu, size: 40.w,),
       ),
     );
   }
