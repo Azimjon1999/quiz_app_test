@@ -17,14 +17,14 @@ class SingleResultBottomWidgets extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CustomButtonWidget(
-            witdh: 68,
+            width: 68,
             height: 60,
             func: onTap1,
             buttonColor: AppColors.white,
             child: AppImages.close,
           ),
           CustomButtonWidget(
-            witdh: 68,
+            width: 68,
             height: 60,
             func: onTap2,
             buttonColor: AppColors.white,
