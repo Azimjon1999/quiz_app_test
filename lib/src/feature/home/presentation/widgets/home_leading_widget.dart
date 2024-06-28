@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/style/images.dart';

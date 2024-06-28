@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/widget/custom_box_widget.dart';
 
@@ -17,7 +18,7 @@ class CustomButtonWidget extends StatelessWidget {
     super.key,
     this.buttonColor = AppColors.c0048B5,
     this.witdh = double.infinity,
-    this.height = 62,
+    this.height = 64,
     this.borderSide = BorderSide.none,
     this.elevation = 0,
     required this.func,
@@ -29,8 +30,8 @@ class CustomButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomBoxWidget(
-      width: witdh,
-      height: height,
+      width: witdh.w,
+      height: height.h,
       blurRadius: blurRadius,
       child: Center(
         child: MaterialButton(

@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
-import 'package:quiz_app/src/core/routes/app_route_name.dart';
-import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/style/images.dart';
-import 'package:quiz_app/src/core/widget/app_title_widget.dart';
 import 'package:quiz_app/src/core/widget/custom_button_widget.dart';
 import 'package:quiz_app/src/core/widget/language_widget.dart';
 import 'package:quiz_app/src/core/widget/scaffold_with_background_widget.dart';
@@ -42,9 +38,7 @@ class HomePage extends StatelessWidget {
             },
           );
         },
-        chahgeInfoOnTap: () {
-          context.go('${AppRouteName.homePage}${AppRouteName.updateInfoPage}');
-        },
+        chahgeInfoOnTap: () => provider.navigateToChangeInfo(context),
         logOutOnTap: () {},
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -55,12 +49,15 @@ class HomePage extends StatelessWidget {
       ),
       body: ScaffoldWithBackgroundWidget(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32),
+          padding: const EdgeInsets.symmetric(horizontal: 22),
           child: Column(
             children: [
               SizedBox(height: 46.h),
-              HomeLeadingWidget(onTap: () => provider.openDrawer),
-              HomeBodyWidgets(onTap1: (){}, onTap2: (){},),
+              HomeLeadingWidget(onTap: () => provider.openDrawer()),
+              HomeBodyWidgets(
+                onTap1: () => provider.navigateToSinglePayer(context),
+                onTap2: () {},
+              ),
             ],
           ),
         ),

@@ -23,7 +23,7 @@ class LanguagesWidget extends StatelessWidget {
           blurRadius: 16,
           padding: const EdgeInsets.symmetric(horizontal: 14),
           witdh: double.infinity,
-          height: 66.h,
+          height: 74.h,
           buttonColor: AppColors.white,
           func: uzbekOnTap,
           child: Row(
@@ -53,7 +53,7 @@ class LanguagesWidget extends StatelessWidget {
           blurRadius: 16,
           padding: const EdgeInsets.symmetric(horizontal: 14),
           witdh: double.infinity,
-          height: 66.h,
+          height: 74.h,
           buttonColor: AppColors.white,
           func: englishOnTap,
           child: Row(
@@ -83,7 +83,7 @@ class LanguagesWidget extends StatelessWidget {
           blurRadius: 16.h,
           padding: const EdgeInsets.symmetric(horizontal: 14),
           witdh: double.infinity,
-          height: 66.h,
+          height: 74.h,
           buttonColor: AppColors.white,
           func: russinOnTap,
           child: Row(

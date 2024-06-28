@@ -10,7 +10,14 @@ class HomeController extends ChangeNotifier {
     scaffoldKey.currentState!.openDrawer();
   }
 
-  void navigateToChangeInfo() {}
+  void navigateToChangeInfo(BuildContext context) {
+    context.go('${AppRouteName.homePage}${AppRouteName.updateInfoPage}');
+  }
+
+   void navigateToSinglePayer(BuildContext context) {
+    context.go('${AppRouteName.homePage}${AppRouteName.singlePlayerPage}');
+  }
+
   void navigateToProfile(BuildContext context) {
     context.go(AppRouteName.profilePage);
   }

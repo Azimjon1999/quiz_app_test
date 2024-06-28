@@ -8,13 +8,17 @@ import "package:quiz_app/src/feature/choose_language/presentation/pages/choose_l
 import "package:quiz_app/src/feature/home/presentation/pages/home_page.dart";
 import "package:quiz_app/src/feature/single_player/presentation/pages/single_player_page.dart";
 import "package:quiz_app/src/feature/profile/presentation/pages/profile_page.dart";
+import "package:quiz_app/src/feature/single_player/presentation/pages/single_quiz.dart";
+import "package:quiz_app/src/feature/single_player/presentation/pages/single_result_page.dart";
 import "package:quiz_app/src/feature/updateInfo/presemtation/pages/update_info_page.dart";
+import "../../feature/auth/presentation/pages/forget_otp_page.dart";
+import "../../feature/auth/presentation/pages/forget_password_page.dart";
 import "../../feature/splash/presentation/pages/splash_page.dart";
 import "app_route_name.dart";
 
 final class AppRouter {
   static GoRouter router = GoRouter(
-    initialLocation: AppRouteName.splashPage,
+    initialLocation: AppRouteName.homePage,
     debugLogDiagnostics: true,
     routes: <RouteBase>[
       GoRoute(
@@ -36,25 +40,22 @@ final class AppRouter {
             const LoginPage(),
         routes: [
           GoRoute(
-            path: AppRouteName.forgetPassword,
-            builder: (BuildContext context, GoRouterState state) =>
-                const ForgetPasswordPage(),
-            routes: [
-              GoRoute(
-                path: AppRouteName.otpForgetPage,
-                builder: (BuildContext context, GoRouterState state) =>
-                const OtpForgetPage(),
-              ),
-            ]
-          ),
-
-
+              path: AppRouteName.forgetPassword,
+              builder: (BuildContext context, GoRouterState state) =>
+                  const ForgetPasswordPage(),
+              routes: [
+                GoRoute(
+                  path: AppRouteName.otpForgetPage,
+                  builder: (BuildContext context, GoRouterState state) =>
+                      const OtpForgetPage(),
+                ),
+              ]),
         ],
       ),
       GoRoute(
         path: AppRouteName.nemPasswordPage,
         builder: (BuildContext context, GoRouterState state) =>
-        const NewPasswordCreadPage(),
+            const NewPasswordCreadPage(),
       ),
       GoRoute(
         path: AppRouteName.registerPage,
@@ -82,14 +83,29 @@ final class AppRouter {
           GoRoute(
             path: AppRouteName.singlePlayerPage,
             builder: (context, state) => const SinglePlayerPage(),
+            routes: [
+              GoRoute(
+                path: AppRouteName.singlePlayerQuiz,
+                builder: (context, state) => SingleQuiz(
+                  theme: state.extra as String,
+                ),
+                routes: [
+                  GoRoute(
+                    path: AppRouteName.singlePlayerQuizResult,
+                    builder: (context, state) => SingleResultPage(
+                      data: state.extra as List<int>,
+                    ),
+                  )
+                ],
+              )
+            ],
           ),
         ],
-
-
       ),
       GoRoute(
-          path: AppRouteName.profilePage,
-        builder: (BuildContext context, GoRouterState state) => const ProfilePage(),
+        path: AppRouteName.profilePage,
+        builder: (BuildContext context, GoRouterState state) =>
+            const ProfilePage(),
       )
     ],
   );

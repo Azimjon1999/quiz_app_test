@@ -7,7 +7,8 @@ import 'package:quiz_app/src/core/widget/custom_button_widget.dart';
 class HomeBodyWidgets extends StatelessWidget {
   final VoidCallback onTap1;
   final VoidCallback onTap2;
-  const HomeBodyWidgets({super.key, required this.onTap1, required this.onTap2});
+  const HomeBodyWidgets(
+      {super.key, required this.onTap1, required this.onTap2});
 
   @override
   Widget build(BuildContext context) {
@@ -15,29 +16,29 @@ class HomeBodyWidgets extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         children: [
-          SizedBox(height: 140.h),
+          SizedBox(height: 180.h),
           const AppTitleWidget(),
           SizedBox(height: 80.h),
           CustomButtonWidget(
             buttonColor: AppColors.white,
-            func: () {},
-            child: const Text(
-              'Single Player',
+            func: onTap1,
+            child: Text(
+              'Player',
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 40.sp,
                 color: AppColors.c0048B5,
                 fontFamily: 'IrishGrover',
               ),
             ),
           ),
-          const SizedBox(height: 22),
+          SizedBox(height: 44.h),
           CustomButtonWidget(
             buttonColor: AppColors.white,
-            func: () {},
-            child: const Text(
+            func: onTap2,
+            child: Text(
               'Multi Player',
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 40.sp,
                 color: AppColors.c0048B5,
                 fontFamily: 'IrishGrover',
               ),
