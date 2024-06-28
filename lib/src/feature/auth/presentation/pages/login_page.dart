@@ -18,8 +18,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<AuthController>(context);
     return Scaffold(
-      // resizeToAvoidBottomInset: false,
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      resizeToAvoidBottomInset: false,
       body: ScaffoldWithBackgroundWidget(
         child: SingleChildScrollView(
           child: Padding(
