@@ -24,7 +24,7 @@ class RegisterPage extends StatelessWidget {
           const ScaffoldWithBackgroundWidget(child: SizedBox.expand()),
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 54),
+              padding: const EdgeInsets.symmetric(horizontal: 34),
               child: Column(
                 children: [
                   SizedBox(height: 170.h),
@@ -46,6 +46,7 @@ class RegisterPage extends StatelessWidget {
                   ),
                   SizedBox(height: 20.h),
                   CustomButtonWidget(
+                    // witdh: double.infinity,
                     func: () => provider.navigateToOtp(context),
                     child: const Text(
                       'Register',

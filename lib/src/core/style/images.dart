@@ -52,6 +52,8 @@ sealed class AppImages {
     // fit: BoxFit.cover,
   );
 
+
+
   static final SvgPicture loseIcon = SvgPicture.asset(
     "assets/images/lose.svg",
     height: 110.h,
@@ -66,12 +68,24 @@ sealed class AppImages {
     fit: BoxFit.cover,
   );
 
+
+
   static final SvgPicture starIcon = SvgPicture.asset(
     "assets/images/star.svg",
     height: 23.h,
     width: 23.w,
     fit: BoxFit.cover,
   );
+
+  static final SvgPicture userIcon2 = SvgPicture.asset(
+    "assets/images/user_circler.svg",
+    height: 60.h,
+    width: 60.w,
+    fit: BoxFit.cover,
+  );
+
+
+
 
   /// PNG
   ///

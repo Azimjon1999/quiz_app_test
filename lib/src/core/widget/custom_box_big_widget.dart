@@ -2,21 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 
-class CustomBoxWidget extends StatelessWidget {
+class CustomBoxBigWidget extends StatelessWidget {
   final Widget child;
   final double width;
   final double height;
   final Color backgroundColor;
   final EdgeInsets padding;
-  final double blurRadius;
-  const CustomBoxWidget({
+  const CustomBoxBigWidget({
     super.key,
     this.width = 300,
     this.height = 190,
     required this.child,
     this.backgroundColor = AppColors.white,
     this.padding = EdgeInsets.zero,
-    this.blurRadius = 20,
   });
 
   @override
@@ -25,14 +23,14 @@ class CustomBoxWidget extends StatelessWidget {
       width: width,
       height: height,
       padding: padding,
-      transform: Matrix4.skewX(-0.1),
+      transform: Matrix4.skewX(-0.05),
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
             color: AppColors.black.withOpacity(0.5),
-            blurRadius: blurRadius,
+            blurRadius: 20,
             offset: const Offset(2, 5),
           ),
         ],

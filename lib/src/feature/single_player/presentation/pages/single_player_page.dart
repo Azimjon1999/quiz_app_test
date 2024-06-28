@@ -1,21 +1,25 @@
 import "package:flutter/material.dart";
-import "package:quiz_app/src/core/style/colors.dart";
+import "package:go_router/go_router.dart";
+import "package:quiz_app/src/core/widget/appbar_leading_widget.dart";
+import "package:quiz_app/src/core/widget/scaffold_with_background_widget.dart";
 
-import "../../../../core/localization/words.dart";
-import "../../../../core/widget/scaffold_with_background_widget.dart";
-
-class SplashPage extends StatelessWidget {
-  const SplashPage({super.key});
+class SinglePlayerPage extends StatelessWidget {
+  const SinglePlayerPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      backgroundColor: AppColors.transparent,
-      appBar: AppBar(
-        backgroundColor: AppColors.transparent,
+      body: ScaffoldWithBackgroundWidget(
+        child: Column(
+          children: [
+            AppbarLeadingWidget(
+              func: () {
+                context.pop();
+              },
+            ),
+          ],
+        ),
       ),
-
     );
   }
 }

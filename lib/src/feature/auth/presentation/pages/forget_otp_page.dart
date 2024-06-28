@@ -8,11 +8,10 @@ import "package:quiz_app/src/core/widget/appbar_leading_widget.dart";
 import "package:quiz_app/src/core/widget/custom_button_widget.dart";
 import "package:quiz_app/src/feature/auth/controller/auth_controller.dart";
 import "package:quiz_app/src/feature/auth/presentation/widgets/otp_pin_code_widget.dart";
-
 import "../../../../core/widget/scaffold_with_background_widget.dart";
 
-class OtpPage extends StatelessWidget {
-  const OtpPage({super.key});
+class OtpForgetPage extends StatelessWidget {
+  const OtpForgetPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +44,9 @@ class OtpPage extends StatelessWidget {
                       ),
                       SizedBox(height: 196.h),
                       CustomButtonWidget(
-                        func: () => provider.navigateToHome(context),
+                        func: () => provider.navigateToLogin(context),
                         child: const Text(
-                          'Verify Code',
+                          'Verifi Code',
                           style: TextStyle(
                             fontSize: 30,
                             color: AppColors.white,
