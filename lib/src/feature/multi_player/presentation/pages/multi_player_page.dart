@@ -1,7 +1,6 @@
 import "package:flutter/material.dart";
 import "package:quiz_app/src/core/style/colors.dart";
 
-import "../../../../core/localization/words.dart";
 
 class MultiPlayerPage extends StatelessWidget {
   const MultiPlayerPage({super.key});
