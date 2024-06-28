@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/style/images.dart';
@@ -9,6 +10,8 @@ import 'package:quiz_app/src/core/widget/language_widget.dart';
 import 'package:quiz_app/src/core/widget/scaffold_with_background_widget.dart';
 import 'package:quiz_app/src/feature/home/controller/home_controller.dart';
 import 'package:quiz_app/src/feature/home/presentation/widgets/home_drawer_widget.dart';
+
+import '../../../../core/routes/app_route_name.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

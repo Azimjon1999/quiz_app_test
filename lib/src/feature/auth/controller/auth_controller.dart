@@ -37,4 +37,7 @@ class AuthController extends ChangeNotifier {
   void navigateToOtpForgotPassword(BuildContext context) {
     context.go('${AppRouteName.loginPage}/${AppRouteName.forgetPassword}/${AppRouteName.otpForgetPage}');
   }
+  void navigateToNewPassword(BuildContext context) {
+    context.go(AppRouteName.nemPasswordPage);
+  }
 }

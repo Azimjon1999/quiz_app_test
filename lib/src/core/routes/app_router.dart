@@ -15,7 +15,7 @@ import "app_route_name.dart";
 
 final class AppRouter {
   static GoRouter router = GoRouter(
-    initialLocation: AppRouteName.loginPage,
+    initialLocation: AppRouteName.splashPage,
     debugLogDiagnostics: true,
     routes: <RouteBase>[
       GoRoute(
@@ -37,25 +37,22 @@ final class AppRouter {
             const LoginPage(),
         routes: [
           GoRoute(
-            path: AppRouteName.forgetPassword,
-            builder: (BuildContext context, GoRouterState state) =>
-                const ForgetPasswordPage(),
-            routes: [
-              GoRoute(
-                path: AppRouteName.otpForgetPage,
-                builder: (BuildContext context, GoRouterState state) =>
-                const OtpForgetPage(),
-              ),
-            ]
-          ),
-
-
+              path: AppRouteName.forgetPassword,
+              builder: (BuildContext context, GoRouterState state) =>
+                  const ForgetPasswordPage(),
+              routes: [
+                GoRoute(
+                  path: AppRouteName.otpForgetPage,
+                  builder: (BuildContext context, GoRouterState state) =>
+                      const OtpForgetPage(),
+                ),
+              ]),
         ],
       ),
       GoRoute(
         path: AppRouteName.nemPasswordPage,
         builder: (BuildContext context, GoRouterState state) =>
-        const NewPasswordCreadPage(),
+            const NewPasswordCreadPage(),
       ),
       GoRoute(
         path: AppRouteName.registerPage,
@@ -81,12 +78,11 @@ final class AppRouter {
             builder: (context, state) => const UpdateInfoPage(),
           )
         ],
-
-
       ),
       GoRoute(
-          path: AppRouteName.profilePage,
-        builder: (BuildContext context, GoRouterState state) => const ProfilePage(),
+        path: AppRouteName.profilePage,
+        builder: (BuildContext context, GoRouterState state) =>
+            const ProfilePage(),
       )
     ],
   );
