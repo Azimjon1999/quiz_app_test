@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/src/core/localization/words.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 
 class LoginBottonTextWidget extends StatelessWidget {
@@ -9,9 +10,9 @@ class LoginBottonTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      child: const Text(
-        'Don’t have an account ?',
-        style: TextStyle(
+      child: Text(
+        Words.donthaveanaccount.tr(context),
+        style: const TextStyle(
           fontSize: 18,
           color: AppColors.white,
           fontFamily: 'IrishGrover',

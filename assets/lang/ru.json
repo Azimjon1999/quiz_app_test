@@ -2,5 +2,9 @@
   "homeMainWord": "К сожалению",
   "welcome" : "Привет",
   " Wins" : "Wins",
-  "Lost" : "Lost"
+  "Lost" : "Lost",
+
+  "uzbekLanguage" : "Узбекский",
+  "russianLanguage" : "Русский",
+  "englishLanguage" : "Английский"
 }

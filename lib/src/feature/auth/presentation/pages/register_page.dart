@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:provider/provider.dart";
+import "package:quiz_app/src/core/localization/words.dart";
 import "package:quiz_app/src/core/style/colors.dart";
 import "package:quiz_app/src/core/widget/app_title_widget.dart";
 import "package:quiz_app/src/core/widget/custom_button_widget.dart";
@@ -31,26 +32,26 @@ class RegisterPage extends StatelessWidget {
                   const AppTitleWidget(),
                   SizedBox(height: 50.h),
                   MyTextField(
-                    text: 'Email Adress',
+                    text: Words.emailAdress.tr(context) ,
                     controller: provider.emailC,
                   ),
                   SizedBox(height: 20.h),
                   MyTextField(
-                    text: 'Password',
+                    text:Words.password.tr(context) ,
                     controller: provider.passC,
                   ),
                   SizedBox(height: 20.h),
                   MyTextField(
-                    text: 'Confirm Password',
+                    text:Words.confirmPassword.tr(context) ,
                     controller: provider.confirmC,
                   ),
                   SizedBox(height: 20.h),
                   CustomButtonWidget(
                     // witdh: double.infinity,
                     func: () => provider.navigateToOtp(context),
-                    child: const Text(
-                      'Register',
-                      style: TextStyle(
+                    child:  Text(
+                      Words.register.tr(context) ,
+                      style: const TextStyle(
                         fontSize: 30,
                         color: AppColors.white,
                         fontFamily: 'IrishGrover',

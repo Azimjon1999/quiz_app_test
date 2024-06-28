@@ -12,7 +12,7 @@ ChangeNotifierProvider<LocalController> localVM = ChangeNotifierProvider<LocalCo
 );
 
 class LocalController with ChangeNotifier {
-  LocalController() : _appLocal = "uz" {
+  LocalController() : _appLocal = "ru" {
     SharedPreferences.getInstance().then<void>(
       (SharedPreferences sp) {
         final String? appLocal = sp.getString(_spLocalKey);

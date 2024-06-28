@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/src/core/localization/words.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/style/images.dart';
 
@@ -32,9 +33,9 @@ class HomeDrawerWidget extends StatelessWidget {
                   children: [
                     AppImages.userBlueIcon,
                     const SizedBox(height: 15),
-                    const Text(
-                      'User Name',
-                      style: TextStyle(
+                    Text(
+                      Words.userName.tr(context),
+                      style: const TextStyle(
                         fontSize: 25,
                         fontFamily: 'IrishGrover',
                         color: AppColors.c0048B5,
@@ -52,12 +53,12 @@ class HomeDrawerWidget extends StatelessWidget {
             MaterialButton(
               onPressed: languageOnTap,
               minWidth: double.infinity,
-              child: const Align(
+              child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Language',
+                  Words.language.tr(context),
                   textAlign: TextAlign.start,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 25,
                     fontFamily: 'IrishGrover',
                     color: AppColors.c0048B5,
@@ -73,11 +74,11 @@ class HomeDrawerWidget extends StatelessWidget {
             const SizedBox(height: 10),
             MaterialButton(
               onPressed: chahgeInfoOnTap,
-              child: const Align(
+              child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Change Info',
-                  style: TextStyle(
+                  Words.changeInfo.tr(context),
+                  style: const TextStyle(
                     fontSize: 25,
                     fontFamily: 'IrishGrover',
                     color: AppColors.c0048B5,
@@ -93,11 +94,11 @@ class HomeDrawerWidget extends StatelessWidget {
             const SizedBox(height: 340),
             MaterialButton(
               onPressed: logOutOnTap,
-              child: const Align(
+              child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Log Out',
-                  style: TextStyle(
+                  Words.logOut.tr(context),
+                  style: const TextStyle(
                     fontSize: 25,
                     fontFamily: 'IrishGrover',
                     color: AppColors.cFE3340,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/src/core/localization/words.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 
 class RegisterBottomTextWidget extends StatelessWidget {
@@ -9,8 +10,8 @@ class RegisterBottomTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      child: const Text(
-        'Already have account ?',
+      child:  Text(
+        Words.alreadyhaveaccount.tr(context) ,
         style: TextStyle(
           fontSize: 18,
           color: AppColors.white,

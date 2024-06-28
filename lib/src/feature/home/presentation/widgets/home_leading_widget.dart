@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:quiz_app/generated/assets.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
-import 'package:quiz_app/src/core/style/images.dart';
 import 'package:quiz_app/src/core/widget/custom_button_widget.dart';
 
-class AppbarLeadingWidget extends StatelessWidget {
-  final VoidCallback func;
-  const AppbarLeadingWidget({super.key, required this.func});
+class HomeLeadingWidget extends StatelessWidget {
+  final VoidCallback onTap;
+  const HomeLeadingWidget({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +15,11 @@ class AppbarLeadingWidget extends StatelessWidget {
       child: CustomButtonWidget(
         width: 68,
         height: 60,
-        func: func,
+        func: onTap,
         buttonColor: AppColors.white,
-        child: AppImages.back,
+        child: Image.asset(
+          Assets.imagesMenuIcon,
+        ),
       ),
     );
   }

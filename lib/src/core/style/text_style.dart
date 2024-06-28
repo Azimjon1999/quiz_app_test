@@ -43,15 +43,6 @@ final class AppTextStyle extends TextTheme {
         color: AppColors.white,
       );
 
-
-
-
-
-
-
-
-
-
   @override
   TextStyle? get titleLarge => TextStyle(
         fontWeight: FontWeight.w400,

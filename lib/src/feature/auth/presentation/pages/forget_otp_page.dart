@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:go_router/go_router.dart";
 import "package:provider/provider.dart";
+import "package:quiz_app/src/core/localization/words.dart";
 import "package:quiz_app/src/core/style/colors.dart";
 import "package:quiz_app/src/core/widget/app_title_widget.dart";
 import "package:quiz_app/src/core/widget/appbar_leading_widget.dart";
@@ -48,6 +49,10 @@ class OtpForgetPage extends StatelessWidget {
                         child: const Text(
                           'Verify Code',
                           style: TextStyle(
+                        func: () => provider.navigateToLogin(context),
+                        child:  Text(
+                          Words.verifiCode.tr(context) ,
+                          style: const TextStyle(
                             fontSize: 30,
                             color: AppColors.white,
                             fontFamily: 'IrishGrover',
