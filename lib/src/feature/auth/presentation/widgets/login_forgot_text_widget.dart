@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/src/core/localization/words.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 
 class LoginForgotTextWidget extends StatelessWidget {
@@ -11,10 +12,10 @@ class LoginForgotTextWidget extends StatelessWidget {
       width: double.infinity,
       child: InkWell(
         onTap: onTap,
-        child: const Text(
+        child:  Text(
           textAlign: TextAlign.right,
-          'Forgot Password?',
-          style: TextStyle(
+          Words.forgotPassword.tr(context),
+          style: const TextStyle(
             fontSize: 14,
             color: AppColors.white,
             fontFamily: 'IrishGrover',

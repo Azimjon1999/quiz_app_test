@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quiz_app/src/core/localization/words.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/widget/app_title_widget.dart';
 import 'package:quiz_app/src/core/widget/custom_button_widget.dart';
@@ -23,7 +24,7 @@ class HomeBodyWidgets extends StatelessWidget {
             buttonColor: AppColors.white,
             func: onTap1,
             child: Text(
-              'Player',
+              Words.player.tr(context),
               style: TextStyle(
                 fontSize: 40.sp,
                 color: AppColors.c0048B5,
@@ -36,7 +37,7 @@ class HomeBodyWidgets extends StatelessWidget {
             buttonColor: AppColors.white,
             func: onTap2,
             child: Text(
-              'Multi Player',
+              Words.multiplayer.tr(context),
               style: TextStyle(
                 fontSize: 40.sp,
                 color: AppColors.c0048B5,

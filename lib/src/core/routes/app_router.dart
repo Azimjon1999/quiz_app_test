@@ -14,13 +14,11 @@ import "../../feature/auth/presentation/pages/forget_otp_page.dart";
 import "../../feature/auth/presentation/pages/forget_password_page.dart";
 import "../../feature/init/presentation/pages/choose_language_page.dart";
 import "../../feature/init/presentation/pages/splash_page.dart";
-import "../../feature/auth/presentation/pages/forget_otp_page.dart";
-import "../../feature/auth/presentation/pages/forget_password_page.dart";
 import "app_route_name.dart";
 
 final class AppRouter {
   static GoRouter router = GoRouter(
-    initialLocation: AppRouteName.homePage,
+    initialLocation: AppRouteName.splashPage,
     debugLogDiagnostics: true,
     routes: <RouteBase>[
       GoRoute(

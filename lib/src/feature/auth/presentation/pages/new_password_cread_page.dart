@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:provider/provider.dart";
+import "package:quiz_app/src/core/localization/words.dart";
 import "package:quiz_app/src/core/style/colors.dart";
 import "package:quiz_app/src/core/widget/app_title_widget.dart";
 import "package:quiz_app/src/core/widget/custom_button_widget.dart";
@@ -28,20 +29,20 @@ class NewPasswordCreadPage extends StatelessWidget {
                 SizedBox(height: 50.h),
                 MyTextField(
                   controller: provider.emailC,
-                  text: 'New Password',
+                  text: Words.password.tr(context) ,
                   type: TextInputType.emailAddress,
                 ),
                 SizedBox(height: 20.h),
                 MyTextField(
                   controller: provider.passC,
-                  text: ' Confirm Password',
+                  text: Words.confirmPassword.tr(context) ,
                 ),
                 SizedBox(height: 16.h),
                 CustomButtonWidget(
                   func: () => provider.navigateToLogin(context),
-                  child: const Text(
-                    'Confirm',
-                    style: TextStyle(
+                  child:  Text(
+                    Words.confirm.tr(context) ,
+                    style: const TextStyle(
                       fontSize: 30,
                       color: AppColors.white,
                       fontFamily: 'IrishGrover',

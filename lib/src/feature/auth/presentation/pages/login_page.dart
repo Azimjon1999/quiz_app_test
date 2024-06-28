@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:provider/provider.dart";
+import "package:quiz_app/src/core/localization/words.dart";
 import "package:quiz_app/src/core/style/colors.dart";
 import "package:quiz_app/src/core/widget/app_title_widget.dart";
 import "package:quiz_app/src/core/widget/custom_button_widget.dart";
@@ -30,22 +31,25 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: 50.h),
                 MyTextField(
                   controller: provider.emailC,
-                  text: 'Email Adress',
+                  text: Words.emailAdress.tr(context),
+                  // text:  "",
                   type: TextInputType.emailAddress,
                 ),
                 SizedBox(height: 20.h),
                 MyTextField(
                   controller: provider.passC,
-                  text: 'Password',
+                  text: Words.password.tr(context),
+                  // text: "",
                 ),
                 SizedBox(height: 10.h),
-                LoginForgotTextWidget(onTap: () => provider.navigateToForgotPassword(context)),
+                LoginForgotTextWidget(
+                    onTap: () => provider.navigateToForgotPassword(context)),
                 SizedBox(height: 16.h),
                 CustomButtonWidget(
                   func: () => provider.navigateToHome(context),
-                  child: const Text(
-                    'LogIn',
-                    style: TextStyle(
+                  child: Text(
+                    Words.login.tr(context),
+                    style: const TextStyle(
                       fontSize: 30,
                       color: AppColors.white,
                       fontFamily: 'IrishGrover',

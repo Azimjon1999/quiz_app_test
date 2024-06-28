@@ -28,7 +28,11 @@ class SingleButtonsWidget extends StatelessWidget {
             func: onTap1,
             child: Text(
               'Sport',
-              style: TextStyle(color: AppColors.c0048B5, fontSize: 40.sp),
+              style: TextStyle(
+                color: AppColors.c0048B5,
+                fontSize: 40.sp,
+                fontFamily: 'IrishGrover',
+              ),
             ),
           ),
           SizedBox(height: 20.h),
@@ -37,7 +41,11 @@ class SingleButtonsWidget extends StatelessWidget {
             func: onTap2,
             child: Text(
               'Cinema',
-              style: TextStyle(color: AppColors.c0048B5, fontSize: 40.sp),
+              style: TextStyle(
+                color: AppColors.c0048B5,
+                fontSize: 40.sp,
+                fontFamily: 'IrishGrover',
+              ),
             ),
           ),
           SizedBox(height: 20.h),
@@ -46,7 +54,11 @@ class SingleButtonsWidget extends StatelessWidget {
             func: onTap3,
             child: Text(
               'History',
-              style: TextStyle(color: AppColors.c0048B5, fontSize: 40.sp),
+              style: TextStyle(
+                color: AppColors.c0048B5,
+                fontSize: 40.sp,
+                fontFamily: 'IrishGrover',
+              ),
             ),
           ),
           SizedBox(height: 20.h),
@@ -55,7 +67,11 @@ class SingleButtonsWidget extends StatelessWidget {
             func: onTap4,
             child: Text(
               'Music',
-              style: TextStyle(color: AppColors.c0048B5, fontSize: 40.sp),
+              style: TextStyle(
+                color: AppColors.c0048B5,
+                fontSize: 40.sp,
+                fontFamily: 'IrishGrover',
+              ),
             ),
           ),
         ],

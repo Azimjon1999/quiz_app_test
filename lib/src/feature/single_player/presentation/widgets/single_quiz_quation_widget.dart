@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quiz_app/src/core/localization/words.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/widget/custom_box_big_widget.dart';
 
@@ -21,7 +22,7 @@ class SingleQuizQuationWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Quations $quationNumber/10',
+              '${Words.quations.tr(context)} $quationNumber/10',
               style: TextStyle(
                 fontSize: 20.sp,
                 color: AppColors.c0048B5,

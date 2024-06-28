@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:quiz_app/src/core/localization/words.dart';
 import 'package:quiz_app/src/core/routes/app_route_name.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/widget/custom_box_big_widget.dart';
@@ -27,8 +28,8 @@ class SingleResultPage extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 110.h),
-              const SingleQuizTitleWidget(
-                title: 'Greate',
+              SingleQuizTitleWidget(
+                title: Words.gREAT.tr(context),
               ),
               SizedBox(height: 110.h),
               Stack(
@@ -41,7 +42,7 @@ class SingleResultPage extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          'STATISTICS',
+                          Words.sTATISTICS.tr(context),
                           style: TextStyle(
                             color: AppColors.c0048B5,
                             fontSize: 36.sp,
@@ -50,7 +51,7 @@ class SingleResultPage extends StatelessWidget {
                         ),
                         SizedBox(height: 14.h),
                         Text(
-                          'Your Score $score',
+                          '${Words.yourscore} $score',
                           style: TextStyle(
                             color: AppColors.c0048B5,
                             fontSize: 26.sp,
@@ -69,7 +70,7 @@ class SingleResultPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Correct Answer',
+                              Words.correctAnswer.tr(context),
                               style: TextStyle(
                                 color: AppColors.c2ED334,
                                 fontSize: 24.sp,
@@ -95,7 +96,7 @@ class SingleResultPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'InCorrect Answer',
+                              Words.incorrectAnswer.tr(context),
                               style: TextStyle(
                                 color: AppColors.cFE3340,
                                 fontSize: 24.sp,

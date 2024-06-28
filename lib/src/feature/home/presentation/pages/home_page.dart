@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_app/src/core/style/images.dart';
+import 'package:quiz_app/src/core/widget/app_material_context.dart';
 import 'package:quiz_app/src/core/widget/custom_button_widget.dart';
 import 'package:quiz_app/src/core/widget/language_widget.dart';
 import 'package:quiz_app/src/core/widget/scaffold_with_background_widget.dart';
@@ -29,9 +30,8 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 34),
                 child: Center(
                   child: LanguagesWidget(
-                    uzbekOnTap: () {},
-                    russinOnTap: () {},
-                    englishOnTap: () {},
+                    shouldGoNext: false,
+                    localController: localController,
                   ),
                 ),
               );

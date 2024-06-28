@@ -39,6 +39,7 @@ class SingleQuiz extends StatelessWidget {
                 quationNumber: 6,
                 quation: 'What is the capital city of India?',
               ),
+              SizedBox(height: 20.h),
               CustomButtonWidget(
                 padding: EdgeInsets.only(left: 20.w, top: 8.h, bottom: 8.h),
                 buttonColor: AppColors.white,
