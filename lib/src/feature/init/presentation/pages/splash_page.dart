@@ -4,7 +4,6 @@ import "package:go_router/go_router.dart";
 import "package:quiz_app/setup.dart";
 import "package:quiz_app/src/core/routes/app_route_name.dart";
 import "package:quiz_app/src/core/style/colors.dart";
-import "package:quiz_app/src/core/style/images.dart";
 import "package:quiz_app/src/core/widget/app_title_widget.dart";
 
 import "../../../../core/widget/scaffold_with_background_widget.dart";
@@ -19,6 +18,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   Future<void> splash() async {
     await Future.delayed(const Duration(seconds: 3));
+    // context.go(AppRouteName.chooseLanguage);
     if (token == null) {
       context.go(AppRouteName.loginPage);
     } else {

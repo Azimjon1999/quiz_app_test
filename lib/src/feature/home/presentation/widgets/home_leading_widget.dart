@@ -14,7 +14,7 @@ class HomeLeadingWidget extends StatelessWidget {
       width: double.infinity,
       alignment: Alignment.centerLeft,
       child: CustomButtonWidget(
-        witdh: 68,
+        width: 68,
         height: 60,
         func: onTap,
         buttonColor: AppColors.white,

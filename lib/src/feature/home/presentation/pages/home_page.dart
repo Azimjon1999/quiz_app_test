@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:quiz_app/src/core/routes/app_route_name.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/style/images.dart';
+import 'package:quiz_app/src/core/widget/app_material_context.dart';
 import 'package:quiz_app/src/core/widget/app_title_widget.dart';
 import 'package:quiz_app/src/core/widget/custom_button_widget.dart';
 import 'package:quiz_app/src/core/widget/language_widget.dart';
@@ -33,9 +34,7 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 34),
                 child: Center(
                   child: LanguagesWidget(
-                    uzbekOnTap: () {},
-                    russinOnTap: () {},
-                    englishOnTap: () {},
+                    localController: localController,
                   ),
                 ),
               );
@@ -49,7 +48,7 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: CustomButtonWidget(
-        witdh: 130,
+        width: 130,
         func: () => provider.navigateToProfile(context),
         child: AppImages.userIcon,
       ),

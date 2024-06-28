@@ -1,4 +1,3 @@
-
 import "package:flutter/material.dart";
 import "package:flutter_localizations/flutter_localizations.dart";
 
@@ -15,63 +14,62 @@ import "../routes/app_router.dart";
 /// {@endtemplate}
 ///
 
-
 final ThemeController themeController = ThemeController();
 final LocalController localController = LocalController();
 
-
 @immutable
 class AppMaterialContext extends StatelessWidget {
-
-  AppMaterialContext({super.key}): builderKey = GlobalKey();
+  AppMaterialContext({super.key}) : builderKey = GlobalKey();
 
   final GlobalKey builderKey;
 
-
   @override
   Widget build(BuildContext context) => InheritedThemeNotifier(
-      themeController: themeController,
-      child: InheritedLocalNotifier(
-        localController: localController,
-        child: Builder(
-            builder: (BuildContext context) {
-              return MaterialApp.router(
-                onGenerateTitle: (BuildContext context) => "PDP Project",
-                routerConfig: AppRouter.router,
-                restorationScopeId: "material_app",
-                debugShowCheckedModeBanner: false,
-                locale: InheritedLocalNotifier.maybeOf(context)?.appLocal ?? const Locale("uz", "UZ"),
-                supportedLocales: const <Locale>[Locale("uz", "UZ"), Locale("ru", "RU"), Locale("uz", "UZ")],
-                localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
-                  AppLocalizations.delegate,
-                  GlobalMaterialLocalizations.delegate,
-                  GlobalWidgetsLocalizations.delegate,
-                  GlobalCupertinoLocalizations.delegate,
-                ],
-                localeResolutionCallback: (final Locale? deviceLocale, final Iterable<Locale> supportedLocales) {
-                  final LocalController local = InheritedLocalNotifier.maybeOf(context, listen: false)!;
+        themeController: themeController,
+        child: InheritedLocalNotifier(
+          localController: localController,
+          child: Builder(builder: (BuildContext context) {
+            return MaterialApp.router(
+              onGenerateTitle: (BuildContext context) => "PDP Project",
+              routerConfig: AppRouter.router,
+              restorationScopeId: "material_app",
+              debugShowCheckedModeBanner: false,
+              locale: InheritedLocalNotifier.maybeOf(context)?.appLocal ?? const Locale("uz", "UZ"),
 
-                  for (final Locale locale in supportedLocales) {
-                    if (locale.languageCode == local.appLocal.languageCode) {
-                      return local.appLocal;
-                    }
+              supportedLocales: const <Locale>[
+                Locale("uz", "UZ"),
+                Locale("ru", "RU"),
+                Locale("en", "EN"),
+              ],
+              localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
+                AppLocalizations.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              localeResolutionCallback: (final Locale? deviceLocale, final Iterable<Locale> supportedLocales) {
+                final LocalController local = InheritedLocalNotifier.maybeOf(context, listen: false)!;
+
+                for (final Locale locale in supportedLocales) {
+                  if (locale.languageCode == local.appLocal.languageCode) {
+                    return local.appLocal;
                   }
-                  for (final Locale locale in supportedLocales) {
-                    if (deviceLocale == locale) {
-                      return deviceLocale;
-                    }
+                }
+                for (final Locale locale in supportedLocales) {
+                  if (deviceLocale == locale) {
+                    return deviceLocale;
                   }
-                  local.changeLocal(LanguageType.ru);
-                  return const Locale("uz", "UZ");
-                },
-                theme: InheritedThemeNotifier.maybeOf(context)?.theme?? themeController.theme,
-                builder: (BuildContext context, Widget? child) => MediaQuery.withNoTextScaling(
-                  key: builderKey,
-                  child: child ?? const SizedBox.shrink(),
-                ),
-              );
-            }
+                }
+                local.changeLocal(LanguageType.uz);
+                return const Locale("uz", "UZ");
+              },
+              // theme: InheritedThemeNotifier.maybeOf(context)?.theme?? themeController.theme,
+              builder: (BuildContext context, Widget? child) => MediaQuery.withNoTextScaling(
+                key: builderKey,
+                child: child ?? const SizedBox.shrink(),
+              ),
+            );
+          }),
         ),
-      ),
-  );
+      );
 }

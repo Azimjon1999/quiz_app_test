@@ -4,7 +4,7 @@ import 'package:quiz_app/src/core/widget/custom_box_widget.dart';
 
 class CustomButtonWidget extends StatelessWidget {
   final Color buttonColor;
-  final double witdh;
+  final double width;
   final double height;
   final Widget child;
   final double elevation;
@@ -16,7 +16,7 @@ class CustomButtonWidget extends StatelessWidget {
   const CustomButtonWidget({
     super.key,
     this.buttonColor = AppColors.c0048B5,
-    this.witdh = double.infinity,
+    this.width = double.infinity,
     this.height = 62,
     this.borderSide = BorderSide.none,
     this.elevation = 0,
@@ -29,7 +29,7 @@ class CustomButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomBoxWidget(
-      width: witdh,
+      width: width,
       height: height,
       blurRadius: blurRadius,
       child: Center(
@@ -37,7 +37,7 @@ class CustomButtonWidget extends StatelessWidget {
           padding: padding,
           elevation: elevation,
           height: height,
-          minWidth: witdh,
+          minWidth: width,
           onPressed: func,
           color: buttonColor,
           shape: RoundedRectangleBorder(
