@@ -17,7 +17,7 @@ class ProfileBackWidget extends StatelessWidget {
 
            },
            height: 60,
-         witdh: 68,
+         width: 68,
          buttonColor: AppColors.white,
            child: AppImages.back,
        )

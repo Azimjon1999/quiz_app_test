@@ -37,7 +37,6 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 
   @override
-  bool isSupported(Locale locale) => ['ru', 'uz'].contains(locale.languageCode);
-
+  bool isSupported(Locale locale) => ['ru', 'uz', 'en'].contains(locale.languageCode);
 
 }

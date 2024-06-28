@@ -13,6 +13,7 @@ class App extends StatelessWidget {
   static void run() => runApp(
         MultiProvider(
           providers: [
+
             ChangeNotifierProvider(
               create: (context) => AuthController(),
             ),

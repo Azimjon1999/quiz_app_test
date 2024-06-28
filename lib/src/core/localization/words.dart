@@ -8,11 +8,11 @@ extension MyWords on Words {
 
 enum Words {
  welcome,
- Quiz,
-  First,
-  Uzbek,
-  English,
-  Russian,
+ quiz,
+ first,
+ uzbekLanguage,
+ russianLanguage,
+ englishLanguage,
   EmailAdress,
   Password,
   ForgotPassword,

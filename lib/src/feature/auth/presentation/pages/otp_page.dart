@@ -47,7 +47,7 @@ class OtpPage extends StatelessWidget {
                       CustomButtonWidget(
                         func: () => provider.navigateToHome(context),
                         child: const Text(
-                          'Verifi Code',
+                          'Verify Code',
                           style: TextStyle(
                             fontSize: 30,
                             color: AppColors.white,

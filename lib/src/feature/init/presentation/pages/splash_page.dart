@@ -17,10 +17,11 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   Future<void> splash() async {
     await Future.delayed(const Duration(seconds: 3));
+    // context.go(AppRouteName.chooseLanguage);
     if (token == null) {
-      context.go(AppRouteName.loginPage);
+      context.go(AppRouteName.chooseLanguage);
     } else {
-      // context.go(AppRouteName.home);
+      context.go(AppRouteName.homePage);
     }
   }
 

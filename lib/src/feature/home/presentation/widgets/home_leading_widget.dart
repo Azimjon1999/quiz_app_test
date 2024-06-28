@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/style/images.dart';
@@ -13,7 +14,7 @@ class HomeLeadingWidget extends StatelessWidget {
       width: double.infinity,
       alignment: Alignment.centerLeft,
       child: CustomButtonWidget(
-        witdh: 68,
+        width: 68,
         height: 60,
         func: onTap,
         buttonColor: AppColors.white,
