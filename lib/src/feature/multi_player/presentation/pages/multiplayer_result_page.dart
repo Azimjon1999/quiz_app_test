@@ -20,8 +20,8 @@ class MultiPlayerResultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-     int correctAnswer = 3;
-     int inCorrectAnswer = 5;
+     int correctAnswer = 5;
+     int inCorrectAnswer = 3;
     return Scaffold(
       body: ScaffoldWithBackgroundWidget(
         child: Padding(
@@ -55,7 +55,7 @@ class MultiPlayerResultPage extends StatelessWidget {
                           child: Text(
                             textAlign: TextAlign.center,
                             Words.youwin.tr(context),
-                            style: AppTextStyle().titleMedium,
+                            style: AppTextStyle().titleMedium?.copyWith(fontSize: 26),
                           ),
                         ),
                         SizedBox(height: 15.h),
@@ -85,19 +85,11 @@ class MultiPlayerResultPage extends StatelessWidget {
                           children: [
                             Text(
                               "Azimjon",
-                              style: TextStyle(
-                                color: AppColors.c2ED334,
-                                fontSize: 24.sp,
-                                fontFamily: 'IrishGrover',
-                              ),
+                              style: AppTextStyle().titleMedium?.copyWith(color: AppColors.cFE3340, fontSize: 24.sp),
                             ),
                             Text(
                               '0',
-                              style: TextStyle(
-                                color: AppColors.c2ED334,
-                                fontSize: 24.sp,
-                                fontFamily: 'IrishGrover',
-                              ),
+                              style: AppTextStyle().titleMedium?.copyWith(color: AppColors.cFE3340, fontSize: 24.sp),
                             ),
                           ],
                         ),

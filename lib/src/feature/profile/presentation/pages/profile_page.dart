@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:go_router/go_router.dart";
+import "package:provider/provider.dart";
 import "package:quiz_app/src/core/routes/app_route_name.dart";
 import "package:quiz_app/src/core/style/colors.dart";
 import "package:quiz_app/src/core/widget/appbar_leading_widget.dart";
@@ -9,12 +10,14 @@ import "package:quiz_app/src/feature/profile/presentation/widgets/profile_pagevi
 import "package:quiz_app/src/feature/profile/presentation/widgets/profile_userresult_widget.dart";
 
 import "../../../../core/widget/scaffold_with_background_widget.dart";
+import "../../controller/profile_controller.dart";
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key, g});
 
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<ProfileController>(context);
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: AppColors.transparent,
@@ -32,7 +35,7 @@ class ProfilePage extends StatelessWidget {
                 ),
                 // const ProfileBackWidget(),
                 AppbarLeadingWidget(func: () {
-                  context.go(AppRouteName.homePage);
+                  provider.navigateToHome(context);
                 }),
                 const SizedBox(
                   height: 10,
@@ -45,7 +48,10 @@ class ProfilePage extends StatelessWidget {
                 const SizedBox(
                   height: 13,
                 ),
-                ProfileCategoryWidget(),
+                ProfileCategoryWidget(
+                  onTap: () => provider.onTap(context),
+                  onTap1: ()=> provider.onTap1(context),
+                ),
                 const SizedBox(
                   height: 13,
                 ),
