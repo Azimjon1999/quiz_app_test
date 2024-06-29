@@ -1,7 +1,5 @@
 import "package:flutter/material.dart";
-import "package:go_router/go_router.dart";
 import "package:provider/provider.dart";
-import "package:quiz_app/src/core/routes/app_route_name.dart";
 import "package:quiz_app/src/core/style/colors.dart";
 import "package:quiz_app/src/core/widget/appbar_leading_widget.dart";
 import "package:quiz_app/src/feature/profile/presentation/widgets/profile_category_widget.dart";
