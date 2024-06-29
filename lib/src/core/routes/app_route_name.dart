@@ -22,4 +22,9 @@ final class AppRouteName {
   static const String singlePlayerPage = "single_player_page";
   static const String singlePlayerQuiz = 'single_player_quiz';
   static const String singlePlayerQuizResult = 'single_player_quiz_result';
+  // MultiPlayer Section
+  static const String multiPlayerPage = "multi_player_page";
+  static const String multiPlayerWaiting = "multi_player_waiting";
+  static const String multiPlayerQuiz = "multi_player_quiz";
+  static const String multiPlayerResult = "multi_player_result";
 }

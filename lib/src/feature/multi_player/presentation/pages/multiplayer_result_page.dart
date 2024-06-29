@@ -1,26 +1,27 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
-import 'package:quiz_app/src/core/localization/words.dart';
-import 'package:quiz_app/src/core/routes/app_route_name.dart';
-import 'package:quiz_app/src/core/style/colors.dart';
-import 'package:quiz_app/src/core/widget/custom_box_big_widget.dart';
-import 'package:quiz_app/src/core/widget/scaffold_with_background_widget.dart';
-import 'package:quiz_app/src/feature/single_player/presentation/widgets/single_quiz_title_widget.dart';
-import 'package:quiz_app/src/feature/single_player/presentation/widgets/single_result_bottom_widgets.dart';
+import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
+import "package:go_router/go_router.dart";
+import "package:quiz_app/src/core/style/images.dart";
+import "package:quiz_app/src/core/style/text_style.dart";
+import "../../../../core/localization/words.dart";
+import "../../../../core/routes/app_route_name.dart";
+import "../../../../core/style/colors.dart";
+import "../../../../core/widget/custom_box_big_widget.dart";
+import "../../../../core/widget/scaffold_with_background_widget.dart";
+import "../../../single_player/presentation/widgets/single_quiz_title_widget.dart";
+import "../../../single_player/presentation/widgets/single_result_bottom_widgets.dart";
 
-class SingleResultPage extends StatelessWidget {
-  final List<int> data;
-  const SingleResultPage({
+
+class MultiPlayerResultPage extends StatelessWidget {
+  const MultiPlayerResultPage({
     super.key,
-    required this.data,
   });
 
   @override
   Widget build(BuildContext context) {
-    final int score = data[0];
-    final int correctAnswer = data[1];
-    final int inCorrectAnswer = data[2];
+
+     int correctAnswer = 3;
+     int inCorrectAnswer = 5;
     return Scaffold(
       body: ScaffoldWithBackgroundWidget(
         child: Padding(
@@ -29,7 +30,7 @@ class SingleResultPage extends StatelessWidget {
             children: [
               SizedBox(height: 110.h),
               SingleQuizTitleWidget(
-                title: Words.gREAT.tr(context),
+                title: Words.win.tr(context),
               ),
               SizedBox(height: 110.h),
               Stack(
@@ -37,7 +38,7 @@ class SingleResultPage extends StatelessWidget {
                 children: [
                   CustomBoxBigWidget(
                     padding:
-                        EdgeInsets.only(left: 20.w, right: 20.w, top: 60.h),
+                    EdgeInsets.only(left: 20.w, right: 20.w, top: 60.h),
                     height: 400.h,
                     child: Column(
                       children: [
@@ -50,22 +51,65 @@ class SingleResultPage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 14.h),
-                        Text(
-                          '${Words.yourscore.tr(context)} $score',
-                          style: TextStyle(
-                            color: AppColors.c0048B5,
-                            fontSize: 26.sp,
-                            fontFamily: 'IrishGrover',
+                        Center(
+                          child: Text(
+                            textAlign: TextAlign.center,
+                            Words.youwin.tr(context),
+                            style: AppTextStyle().titleMedium,
                           ),
                         ),
-                        SizedBox(height: 30.h),
+                        SizedBox(height: 15.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              "Zikrulloh",
+                              style: TextStyle(
+                                color: AppColors.c2ED334,
+                                fontSize: 24.sp,
+                                fontFamily: 'IrishGrover',
+                              ),
+                            ),
+                            Text(
+                              '20',
+                              style: TextStyle(
+                                color: AppColors.c2ED334,
+                                fontSize: 24.sp,
+                                fontFamily: 'IrishGrover',
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              "Azimjon",
+                              style: TextStyle(
+                                color: AppColors.c2ED334,
+                                fontSize: 24.sp,
+                                fontFamily: 'IrishGrover',
+                              ),
+                            ),
+                            Text(
+                              '0',
+                              style: TextStyle(
+                                color: AppColors.c2ED334,
+                                fontSize: 24.sp,
+                                fontFamily: 'IrishGrover',
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 10.h),
 
                         // Statistic
                         const Divider(
-                          color: AppColors.c7A7A7A,
+                          color: AppColors.cD9D9D9,
                           height: 1,
                         ),
-                        SizedBox(height: 30.h),
+                        SizedBox(height: 10.h),
+
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -87,11 +131,8 @@ class SingleResultPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const Divider(
-                          color: AppColors.c7A7A7A,
-                          height: 1,
-                        ),
-                        SizedBox(height: 30.h),
+
+                        SizedBox(height: 10.h),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -113,19 +154,10 @@ class SingleResultPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(height: 30.h),
-                        const Divider(
-                          color: AppColors.c7A7A7A,
-                          height: 1,
-                        ),
                       ],
                     ),
                   ),
-                  Container(
-                    width: 130.w,
-                    height: 130.h,
-                    color: AppColors.c0048B5,
-                  ),
+                  AppImages.winIcon
                 ],
               ),
               SizedBox(height: 80.h),
@@ -135,7 +167,7 @@ class SingleResultPage extends StatelessWidget {
                 },
                 onTap2: () {
                   context.go(
-                      '${AppRouteName.homePage}${AppRouteName.singlePlayerPage}');
+                      '${AppRouteName.homePage}${AppRouteName.multiPlayerPage}');
                 },
               )
             ],

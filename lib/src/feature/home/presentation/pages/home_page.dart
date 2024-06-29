@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_app/src/core/style/images.dart';
 import 'package:quiz_app/src/core/widget/app_material_context.dart';
@@ -12,7 +11,6 @@ import 'package:quiz_app/src/feature/home/presentation/widgets/home_body_widgets
 import 'package:quiz_app/src/feature/home/presentation/widgets/home_drawer_widget.dart';
 import 'package:quiz_app/src/feature/home/presentation/widgets/home_leading_widget.dart';
 
-import '../../../../core/routes/app_route_name.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -58,8 +56,9 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 46.h),
               HomeLeadingWidget(onTap: () => provider.openDrawer()),
               HomeBodyWidgets(
-                onTap1: () => provider.navigateToSinglePayer(context),
-                onTap2: () {},
+                onTap2: () => provider.navigateToMultiPlayer(context),
+
+                onTap1: () => provider.navigateToSinglePlayer(context),
               ),
             ],
           ),

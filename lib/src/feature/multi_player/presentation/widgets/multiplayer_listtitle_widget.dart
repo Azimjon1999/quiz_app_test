@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/localization/words.dart';
 import '../../../../core/style/colors.dart';
 
-class ProfileHistoryListTileWidget extends StatelessWidget {
-  const ProfileHistoryListTileWidget({super.key});
+class MultiplayerListtitleWidget extends StatelessWidget {
+  const MultiplayerListtitleWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return const Padding(
       padding: EdgeInsets.all(8.0),
       child: ListTile(
         leading: Text("Azimjon",style: TextStyle(
@@ -16,12 +15,7 @@ class ProfileHistoryListTileWidget extends StatelessWidget {
             fontWeight: FontWeight.w400,
             color: AppColors.c0048B5,
             fontFamily: "IrishGrover"),),
-        title: Text(Words.wins.tr(context),style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w400,
-            color: AppColors.c0048B5,
-            fontFamily: "IrishGrover"),),
-        trailing: Text("Shuxrat",style: TextStyle(
+        trailing: Text("20",style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w400,
             color: AppColors.c0048B5,

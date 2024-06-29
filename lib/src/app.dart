@@ -6,6 +6,7 @@ import "package:quiz_app/src/feature/home/controller/home_controller.dart";
 import "package:quiz_app/src/feature/single_player/controller/single_player_controller.dart";
 import "package:quiz_app/src/feature/updateInfo/controller/update_info__controller.dart";
 import "core/widget/app_material_context.dart";
+import "feature/multi_player/controller/multiplayer_controller.dart";
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -13,7 +14,6 @@ class App extends StatelessWidget {
   static void run() => runApp(
         MultiProvider(
           providers: [
-
             ChangeNotifierProvider(
               create: (context) => AuthController(),
             ),
@@ -25,6 +25,9 @@ class App extends StatelessWidget {
             ),
             ChangeNotifierProvider(
               create: (context) => SinglePlayerController(),
+            ),
+            ChangeNotifierProvider(
+              create: (context) => MultiPlayerPageController(),
             ),
           ],
           child: const App(),

@@ -31,11 +31,10 @@ class ProfilePage extends StatelessWidget {
                   height: 60,
                 ),
                 // const ProfileBackWidget(),
-                AppbarLeadingWidget(func: (){
+                AppbarLeadingWidget(func: () {
                   context.go(AppRouteName.homePage);
                 }),
                 const SizedBox(
-
                   height: 10,
                 ),
                 const ProfileImageWidget(),

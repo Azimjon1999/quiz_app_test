@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/widget/custom_box_widget.dart';
 
+import '../../../../core/localization/words.dart';
+
 class ProfileCategoryWidget extends StatelessWidget {
 
 
@@ -23,7 +25,7 @@ class ProfileCategoryWidget extends StatelessWidget {
                 log("black");
               },
               child:  Text(
-                "Histories",
+                  Words.histories.tr(context),
                 style: TextStyle(
                     fontFamily: "IrishGrover",
                     fontSize: 20,
@@ -36,7 +38,7 @@ class ProfileCategoryWidget extends StatelessWidget {
                 log("blue");
               },
               child:  Text(
-                "Leaderboard",
+                Words.leaderboard.tr(context),
                 style: TextStyle(
                     fontFamily: "IrishGrover",
                     fontSize: 20,
