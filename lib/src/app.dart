@@ -7,6 +7,7 @@ import "package:quiz_app/src/feature/single_player/controller/single_player_cont
 import "package:quiz_app/src/feature/updateInfo/controller/update_info__controller.dart";
 import "core/widget/app_material_context.dart";
 import "feature/multi_player/controller/multiplayer_controller.dart";
+import "feature/profile/controller/profile_controller.dart";
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -28,6 +29,9 @@ class App extends StatelessWidget {
             ),
             ChangeNotifierProvider(
               create: (context) => MultiPlayerPageController(),
+            ),
+            ChangeNotifierProvider(
+              create: (context) => ProfileController(),
             ),
           ],
           child: const App(),
