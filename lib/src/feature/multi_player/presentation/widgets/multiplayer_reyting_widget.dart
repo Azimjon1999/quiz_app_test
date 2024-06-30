@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:quiz_app/src/feature/profile/presentation/widgets/profile_listtitle_widget.dart';
 import '../../../../core/localization/words.dart';
 import '../../../../core/style/colors.dart';
+import 'multiplayer_listtitle_widget.dart';
 
-class ProfileReytingWidget extends StatelessWidget {
-  ProfileReytingWidget({
+class MultiplayerReytingWidget extends StatelessWidget {
+  MultiplayerReytingWidget({
     super.key,
   });
 
@@ -27,28 +27,19 @@ class ProfileReytingWidget extends StatelessWidget {
                 fontFamily: "IrishGrover"),
           ),
           SizedBox(
-            height: 10.h,
-          ),
-          Container(
-            alignment: Alignment.center,
-            height: 50,
-            width: 50,
-            color: Colors.red,
-          ),
-          SizedBox(
             height: 10.w,
           ),
           Expanded(
               child: ListView.separated(
-                  itemBuilder: (itemBuilder, index) => const ProfileListTileWidget(),
+                  itemBuilder: (itemBuilder, index) =>
+                      const MultiplayerListtitleWidget(),
                   separatorBuilder: (separatorBuilder, index) => const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 24),
                         child: Divider(
                           color: AppColors.cD9D9D9,
                         ),
                       ),
-                  itemCount: 10)
-          )
+                  itemCount: 10))
         ],
       ),
     );

@@ -29,7 +29,7 @@ class NewPasswordCreadPage extends StatelessWidget {
                 SizedBox(height: 50.h),
                 MyTextField(
                   controller: provider.emailC,
-                  text: Words.password.tr(context) ,
+                  text: Words.newPassword.tr(context) ,
                   type: TextInputType.emailAddress,
                 ),
                 SizedBox(height: 20.h),

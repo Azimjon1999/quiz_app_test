@@ -14,8 +14,11 @@ class HomeController extends ChangeNotifier {
     context.go('${AppRouteName.homePage}${AppRouteName.updateInfoPage}');
   }
 
-   void navigateToSinglePayer(BuildContext context) {
+   void navigateToSinglePlayer(BuildContext context) {
     context.go('${AppRouteName.homePage}${AppRouteName.singlePlayerPage}');
+  }
+  void navigateToMultiPlayer(BuildContext context) {
+    context.go('${AppRouteName.homePage}${AppRouteName.multiPlayerPage}');
   }
 
   void navigateToProfile(BuildContext context) {

@@ -46,7 +46,7 @@ class OtpPage extends StatelessWidget {
                       ),
                       SizedBox(height: 196.h),
                       CustomButtonWidget(
-                        func: () => provider.navigateToHome(context),
+                        func: () => provider.navigateToLogin(context),
                         child: Text(
                           Words.verifiCode.tr(context),
                           style: const TextStyle(

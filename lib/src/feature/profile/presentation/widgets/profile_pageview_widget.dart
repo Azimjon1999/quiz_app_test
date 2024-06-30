@@ -21,7 +21,7 @@ class ProfilePageViewWidget extends StatelessWidget {
           child: PageView(
             controller: controller,
             children:  [
-           ProfileHistoryWidget(),
+           const ProfileHistoryWidget(),
               ProfileReytingWidget()
             ],
 

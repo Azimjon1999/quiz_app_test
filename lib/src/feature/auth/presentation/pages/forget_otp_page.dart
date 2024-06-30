@@ -45,9 +45,9 @@ class OtpForgetPage extends StatelessWidget {
                       ),
                       SizedBox(height: 196.h),
                       CustomButtonWidget(
-                        func: () => provider.navigateToLogin(context),
-                        child:  Text(
-                          Words.verifiCode.tr(context) ,
+                        func: () => provider.navigateToNewPassword(context),
+                        child: Text(
+                          Words.verifiCode.tr(context),
                           style: const TextStyle(
                             fontSize: 30,
                             color: AppColors.white,

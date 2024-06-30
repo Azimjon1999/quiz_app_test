@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/src/feature/profile/presentation/widgets/profile_history_listtitle_widget.dart';
+import '../../../../core/localization/words.dart';
 import '../../../../core/style/colors.dart';
 
 class ProfileHistoryWidget extends StatelessWidget {
@@ -16,9 +17,9 @@ class ProfileHistoryWidget extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const Text(
-            "Histories",
-            style: TextStyle(
+           Text(
+            Words.histories.tr(context),
+            style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
                 color: AppColors.c0048B5,

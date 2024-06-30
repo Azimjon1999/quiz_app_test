@@ -1,5 +1,6 @@
 {
   "welcome": "Hello",
+  "win": "Win",
   "uzbekLanguage": "Uzbek",
   "russianLanguage": "Russian",
   "englishLanguage": "English",
@@ -41,4 +42,5 @@
   "gameWillstartafter3seconds": "Game Will start after 3 seconds",
   "youwin": "You Win",
   "youlose": "You Lose"
+  "newPassword" : "New Password"
 }

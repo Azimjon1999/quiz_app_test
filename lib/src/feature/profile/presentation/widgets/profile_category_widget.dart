@@ -1,12 +1,14 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/widget/custom_box_widget.dart';
 
+import '../../../../core/localization/words.dart';
+
 class ProfileCategoryWidget extends StatelessWidget {
-
-
-   ProfileCategoryWidget({super.key, });
+  bool isBlack = false ;
+Function() onTap;
+Function() onTap1;
+   ProfileCategoryWidget({super.key,  required this.onTap, required this.onTap1});
 
   @override
   Widget build(BuildContext context) {
@@ -19,29 +21,25 @@ class ProfileCategoryWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             InkWell(
-              onTap: () {
-                log("black");
-              },
+              onTap: () => onTap(),
               child:  Text(
-                "Histories",
+                  Words.histories.tr(context),
                 style: TextStyle(
                     fontFamily: "IrishGrover",
                     fontSize: 20,
                     fontWeight: FontWeight.w400,
-                    color: AppColors.black),
+                    color:isBlack? AppColors.black : AppColors.c0048B5),
               ),
             ),
             InkWell(
-              onTap: () {
-                log("blue");
-              },
+              onTap: () => onTap1(),
               child:  Text(
-                "Leaderboard",
+                Words.leaderboard.tr(context),
                 style: TextStyle(
                     fontFamily: "IrishGrover",
                     fontSize: 20,
                     fontWeight: FontWeight.w400,
-                    color: AppColors.c0048B5),
+                    color:isBlack? AppColors.c0048B5 : AppColors.black),
               ),
             ),
           ],

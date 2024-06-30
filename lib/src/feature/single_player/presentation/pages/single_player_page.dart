@@ -9,6 +9,7 @@ import "package:quiz_app/src/feature/single_player/controller/single_player_cont
 import "package:quiz_app/src/feature/single_player/presentation/widgets/single_buttons_widget.dart";
 import "package:quiz_app/src/feature/single_player/presentation/widgets/single_title_widget.dart";
 
+
 class SinglePlayerPage extends StatelessWidget {
   const SinglePlayerPage({super.key});
 
