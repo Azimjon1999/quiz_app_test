@@ -1,8 +1,6 @@
 import "package:flutter/material.dart";
 import "../../../../core/widget/scaffold_with_background_widget.dart";
 import "../widgets/multiplayer_draw_result_widget.dart";
-import "../widgets/multiplayer_lost_result_widget.dart";
-import "../widgets/multiplayer_win_result_widget.dart";
 
 
 class MultiPlayerResultPage extends StatelessWidget {
