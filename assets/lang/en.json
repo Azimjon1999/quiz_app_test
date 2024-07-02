@@ -6,11 +6,11 @@
   "englishLanguage": "English",
   "login": "Login",
   "forgotPassword": "Forgot Password?",
-  "donthaveanaccount": "Already have account ?",
+  "donthaveanaccount": "Don’t have an account ?",
   "register": "Register",
   "confirmPassword": "Confirm Password",
   "emailAdress": "Email Adress",
-  "alreadyhaveaccount": "Don’t have an account ?",
+  "alreadyhaveaccount": "Already have account ?",
   "verifiCode": "Verifi Code",
   "password": "Password",
   "quizFirstCheckEmailAdress": "quizFirstCheckEmailAdress",
@@ -41,6 +41,6 @@
   "getReady": "Get Ready",
   "gameWillstartafter3seconds": "Game Will start after 3 seconds",
   "youwin": "You Win",
-  "youlose": "You Lose"
+  "youlose": "You Lose",
   "newPassword" : "New Password"
 }

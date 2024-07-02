@@ -29,7 +29,7 @@ class SingleResultBottomWidgets extends StatelessWidget {
             height: 60.h,
             func: onTap2,
             buttonColor: AppColors.white,
-            child: AppImages.back,
+            child: AppImages.downIconPng,
           ),
         ],
       ),

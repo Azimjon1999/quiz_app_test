@@ -52,8 +52,6 @@ sealed class AppImages {
     // fit: BoxFit.cover,
   );
 
-
-
   static final SvgPicture loseIcon = SvgPicture.asset(
     "assets/images/lose.svg",
     height: 110.h,
@@ -61,21 +59,19 @@ sealed class AppImages {
     fit: BoxFit.cover,
   );
 
-  static final SvgPicture winIcon = SvgPicture.asset(
-    "assets/images/win.svg",
-    height: 130.h,
-    width: 130.w,
-    fit: BoxFit.cover,
-  );
+  // static final SvgPicture winIcon = SvgPicture.asset(
+  //   "assets/images/win.svg",
+  //   height: 130.h,
+  //   width: 130.w,
+  //   fit: BoxFit.cover,
+  // );
 
-
-
-  static final SvgPicture starIcon = SvgPicture.asset(
-    "assets/images/star.svg",
-    height: 23.h,
-    width: 23.w,
-    fit: BoxFit.cover,
-  );
+  // static final SvgPicture starIcon = SvgPicture.asset(
+  //   "assets/images/star.svg",
+  //   height: 23.h,
+  //   width: 23.w,
+  //   fit: BoxFit.cover,
+  // );
 
   static final SvgPicture userIcon2 = SvgPicture.asset(
     "assets/images/user_circler.svg",
@@ -84,9 +80,6 @@ sealed class AppImages {
     fit: BoxFit.cover,
   );
 
-
-
-
   /// PNG
   ///
 
@@ -94,6 +87,20 @@ sealed class AppImages {
     "assets/images/background_image.png",
     height: double.infinity,
     width: double.infinity,
+    fit: BoxFit.cover,
+  );
+
+  static final Image winIconPng = Image.asset(
+    "assets/images/win_icon.png",
+    height: 70.h,
+    width: 70.w,
+    fit: BoxFit.cover,
+  );
+
+    static final Image downIconPng = Image.asset(
+    "assets/images/down_icon.png",
+    height: 70.h,
+    width: 70.w,
     fit: BoxFit.cover,
   );
 }

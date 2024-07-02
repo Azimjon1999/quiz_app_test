@@ -1,7 +1,6 @@
 import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:go_router/go_router.dart";
-import "package:quiz_app/src/core/style/images.dart";
 import "package:quiz_app/src/core/style/text_style.dart";
 import "../../../../core/localization/words.dart";
 import "../../../../core/routes/app_route_name.dart";
@@ -11,7 +10,6 @@ import "../../../../core/widget/scaffold_with_background_widget.dart";
 import "../../../single_player/presentation/widgets/single_quiz_title_widget.dart";
 import "../../../single_player/presentation/widgets/single_result_bottom_widgets.dart";
 
-
 class MultiPlayerResultPage extends StatelessWidget {
   const MultiPlayerResultPage({
     super.key,
@@ -19,9 +17,8 @@ class MultiPlayerResultPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-     int correctAnswer = 5;
-     int inCorrectAnswer = 3;
+    int correctAnswer = 5;
+    int inCorrectAnswer = 3;
     return Scaffold(
       body: ScaffoldWithBackgroundWidget(
         child: Padding(
@@ -38,7 +35,7 @@ class MultiPlayerResultPage extends StatelessWidget {
                 children: [
                   CustomBoxBigWidget(
                     padding:
-                    EdgeInsets.only(left: 20.w, right: 20.w, top: 60.h),
+                        EdgeInsets.only(left: 20.w, right: 20.w, top: 60.h),
                     height: 400.h,
                     child: Column(
                       children: [
@@ -55,7 +52,9 @@ class MultiPlayerResultPage extends StatelessWidget {
                           child: Text(
                             textAlign: TextAlign.center,
                             Words.youwin.tr(context),
-                            style: AppTextStyle().titleMedium?.copyWith(fontSize: 26),
+                            style: AppTextStyle()
+                                .titleMedium
+                                ?.copyWith(fontSize: 26),
                           ),
                         ),
                         SizedBox(height: 15.h),
@@ -85,11 +84,13 @@ class MultiPlayerResultPage extends StatelessWidget {
                           children: [
                             Text(
                               "Azimjon",
-                              style: AppTextStyle().titleMedium?.copyWith(color: AppColors.cFE3340, fontSize: 24.sp),
+                              style: AppTextStyle().titleMedium?.copyWith(
+                                  color: AppColors.cFE3340, fontSize: 24.sp),
                             ),
                             Text(
                               '0',
-                              style: AppTextStyle().titleMedium?.copyWith(color: AppColors.cFE3340, fontSize: 24.sp),
+                              style: AppTextStyle().titleMedium?.copyWith(
+                                  color: AppColors.cFE3340, fontSize: 24.sp),
                             ),
                           ],
                         ),
@@ -149,7 +150,7 @@ class MultiPlayerResultPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  AppImages.winIcon
+                  // AppImages.winIcon
                 ],
               ),
               SizedBox(height: 80.h),
