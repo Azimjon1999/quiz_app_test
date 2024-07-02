@@ -82,6 +82,11 @@ final class AppRouter {
             const HomePage(),
         routes: [
           GoRoute(
+            path: AppRouteName.profilePage,
+            builder: (BuildContext context, GoRouterState state) =>
+            const ProfilePage(),
+          ),
+          GoRoute(
             path: AppRouteName.updateInfoPage,
             builder: (context, state) => const UpdateInfoPage(),
           ),
@@ -130,11 +135,7 @@ final class AppRouter {
           ),
         ],
       ),
-      GoRoute(
-        path: AppRouteName.profilePage,
-        builder: (BuildContext context, GoRouterState state) =>
-            const ProfilePage(),
-      )
+
     ],
   );
 }

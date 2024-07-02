@@ -1,3 +1,4 @@
+
 import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:go_router/go_router.dart";
@@ -21,9 +22,9 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: AppColors.transparent,
-      appBar: AppBar(
-        backgroundColor: AppColors.transparent,
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: AppColors.transparent,
+      // ),
       body: ScaffoldWithBackgroundWidget(
         child: Center(
           child: Padding(
