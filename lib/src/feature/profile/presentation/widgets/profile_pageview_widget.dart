@@ -6,28 +6,22 @@ import '../../../../core/widget/custom_box_big_widget.dart';
 
 class ProfilePageViewWidget extends StatelessWidget {
   final PageController controller;
-  Function (int ) onPageChanged;
-   ProfilePageViewWidget({super.key, required this.controller, required this.onPageChanged});
+  Function(int) onPageChanged;
+  ProfilePageViewWidget(
+      {super.key, required this.controller, required this.onPageChanged});
 
   @override
   Widget build(BuildContext context) {
-
-    return  Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(horizontal: 10.h),
       child: CustomBoxBigWidget(
           width: double.infinity,
           height: 450.h,
-
           child: PageView(
             controller: controller,
             onPageChanged: onPageChanged,
-            children:  [
-           const ProfileHistoryWidget(),
-              ProfileReytingWidget()
-            ],
-
-          )
-      ),
+            children: [const ProfileHistoryWidget(), ProfileReytingWidget()],
+          )),
     );
   }
 }
