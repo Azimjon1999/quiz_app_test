@@ -16,8 +16,8 @@ class ProfileHistoryListTileWidget extends StatelessWidget {
             fontWeight: FontWeight.w400,
             color: AppColors.c0048B5,
             fontFamily: "IrishGrover"),),
-        title: Text(Words.wins.tr(context),style: TextStyle(
-            fontSize: 20,
+        title: Text(Words.win.tr(context),style: TextStyle(
+            fontSize: 16,
             fontWeight: FontWeight.w400,
             color: AppColors.c0048B5,
             fontFamily: "IrishGrover"),),

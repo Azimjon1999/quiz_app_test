@@ -9,19 +9,20 @@ import "../../controller/multiplayer_controller.dart";
 import "../widgets/multiplayer_title_widget.dart";
 import "../widgets/multiplayer_titleblue_widget.dart";
 
-class MultiPlayerWaitingPage extends StatefulWidget {
-  const MultiPlayerWaitingPage({super.key});
+
+class MultiplayerGetReadyPage extends StatefulWidget {
+  const MultiplayerGetReadyPage({super.key});
 
   @override
-  State<MultiPlayerWaitingPage> createState() => _MultiPlayerWaitingPageState();
+  State<MultiplayerGetReadyPage> createState() => _MultiPlayerWaitingPageState();
 }
 
-class _MultiPlayerWaitingPageState extends State<MultiPlayerWaitingPage> {
+class _MultiPlayerWaitingPageState extends State<MultiplayerGetReadyPage> {
+
   Future<void> splash() async {
     await Future.delayed(const Duration(seconds: 3));
-    final provider =
-        Provider.of<MultiPlayerPageController>(context, listen: false);
-    provider.navigateToMultiPlayerGetReady(context);
+    final provider = Provider.of<MultiPlayerPageController>(context, listen: false);
+    provider.navigateToMultiPlayerQuiz(context);
   }
 
   @override
@@ -45,18 +46,13 @@ class _MultiPlayerWaitingPageState extends State<MultiPlayerWaitingPage> {
                   context.pop();
                 },
               ),
-              SizedBox(height: 20.h),
+              SizedBox(height: 40.h),
               MultiplayerTitleblueWidget(
-                title: Words.waitforhimtoaccept.tr(context),
+                title: Words.getReady.tr(context),
               ),
-              SizedBox(height: 100.h),
+              SizedBox(height: 130.h),
               MultiplayerTitleWidget(
-                titleLarge: Words.yourID.tr(context),
-                titleMedium: "000000001",
-              ),
-              SizedBox(height: 120.h),
-              MultiplayerTitleWidget(
-                titleLarge: Words.searchingforcounter.tr(context),
+                titleLarge: Words.gameWillstartafter3seconds.tr(context),
               ),
             ],
           ),
@@ -65,3 +61,4 @@ class _MultiPlayerWaitingPageState extends State<MultiPlayerWaitingPage> {
     );
   }
 }
+

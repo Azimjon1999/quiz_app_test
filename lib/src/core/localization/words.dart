@@ -54,4 +54,5 @@ enum Words {
   gameWillstartafter3seconds,
   youwin,
   youlose,
+  draw,
 }
