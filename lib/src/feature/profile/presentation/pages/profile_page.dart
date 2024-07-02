@@ -1,14 +1,17 @@
 import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
+import "package:go_router/go_router.dart";
 import "package:provider/provider.dart";
 import "package:quiz_app/src/core/style/colors.dart";
 import "package:quiz_app/src/core/widget/appbar_leading_widget.dart";
 import "package:quiz_app/src/feature/profile/presentation/widgets/profile_category_widget.dart";
 import "package:quiz_app/src/feature/profile/presentation/widgets/profile_image_widget.dart";
-import "package:quiz_app/src/feature/profile/presentation/widgets/profile_pageview_widget.dart";
 import "package:quiz_app/src/feature/profile/presentation/widgets/profile_userresult_widget.dart";
-
+import "../../../../core/widget/custom_box_big_widget.dart";
 import "../../../../core/widget/scaffold_with_background_widget.dart";
 import "../../controller/profile_controller.dart";
+import "../widgets/profile_history_widget.dart";
+import "../widgets/profile_reyting_widget.dart";
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key, g});
@@ -33,7 +36,7 @@ class ProfilePage extends StatelessWidget {
                 ),
                 // const ProfileBackWidget(),
                 AppbarLeadingWidget(func: () {
-                  provider.navigateToHome(context);
+                  context.pop();
                 }),
                 const SizedBox(
                   height: 10,
@@ -47,13 +50,34 @@ class ProfilePage extends StatelessWidget {
                   height: 13,
                 ),
                 ProfileCategoryWidget(
-                  onTap: () => provider.onTap(context),
-                  onTap1: ()=> provider.onTap1(context),
                 ),
                 const SizedBox(
                   height: 13,
                 ),
-                const ProfilePageViewWidget(),
+                 Consumer<ProfileController>(
+                     builder: (context, model, child){
+                       return   Padding(
+                         padding: EdgeInsets.symmetric(horizontal: 10.h),
+                         child: CustomBoxBigWidget(
+                             width: double.infinity,
+                             height: 450.h,
+
+                             child: PageView(
+                               physics: NeverScrollableScrollPhysics(), // Scrollni o'chirish
+                               controller: model.pageController,
+                               // onPageChanged: (index) {
+                               //   model.goToPage(index);
+                               // },
+                               children:  [
+                                 const ProfileHistoryWidget(),
+                                 ProfileReytingWidget()
+                               ],
+
+                             )
+                         ),
+                       );
+                     },
+                     ),
               ],
             ),
           ),

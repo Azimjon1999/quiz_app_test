@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/widget/appbar_leading_widget.dart';
@@ -26,7 +27,8 @@ class MultiplayerQuizPage extends StatelessWidget {
               SizedBox(height: 46.h),
               AppbarLeadingWidget(
                 func: () {
-provider.navigateToMultiPlayerPage(context);                },
+                  context.pop();
+                }
               ),
               SizedBox(height: 20.h),
               Row(

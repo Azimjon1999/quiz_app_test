@@ -1,25 +1,21 @@
 import 'package:flutter/cupertino.dart';
-import 'package:go_router/go_router.dart';
 
-import '../../../core/routes/app_route_name.dart';
 
 class ProfileController extends ChangeNotifier{
 
-  bool isBlack = false;
+  final PageController pageController = PageController();
+  int selectedIndex = 0;
 
-  void navigateToHome(BuildContext context) {
-    context.go(AppRouteName.homePage);
-  }
 
-  void onTap(BuildContext context) {
-   isBlack = true;
-   notifyListeners();
 
-  }
-  void onTap1(BuildContext context) {
-    isBlack = false;
+  void goToPage(int index) {
+    selectedIndex = index;
+    pageController.animateToPage(
+      index,
+      duration: Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+    );
     notifyListeners();
-
   }
 
 }

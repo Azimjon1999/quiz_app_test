@@ -26,5 +26,6 @@ final class AppRouteName {
   static const String multiPlayerPage = "multi_player_page";
   static const String multiPlayerWaiting = "multi_player_waiting";
   static const String multiPlayerQuiz = "multi_player_quiz";
+  static const String multiPlayerGetReady = "multi_player_get_ready";
   static const String multiPlayerResult = "multi_player_result";
 }
