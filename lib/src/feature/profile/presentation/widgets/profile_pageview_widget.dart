@@ -6,8 +6,8 @@ import '../../../../core/widget/custom_box_big_widget.dart';
 
 class ProfilePageViewWidget extends StatelessWidget {
   final PageController controller;
-  Function(int) onPageChanged;
-  ProfilePageViewWidget(
+ final Function(int) onPageChanged;
+ const ProfilePageViewWidget(
       {super.key, required this.controller, required this.onPageChanged});
 
   @override

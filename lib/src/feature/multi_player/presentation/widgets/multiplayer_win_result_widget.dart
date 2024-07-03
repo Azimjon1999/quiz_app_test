@@ -5,7 +5,6 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/localization/words.dart';
 import '../../../../core/routes/app_route_name.dart';
 import '../../../../core/style/colors.dart';
-import '../../../../core/style/images.dart';
 import '../../../../core/style/text_style.dart';
 import '../../../../core/widget/custom_box_big_widget.dart';
 import '../../../single_player/presentation/widgets/single_quiz_title_widget.dart';
@@ -78,11 +77,11 @@ class MultiplayerWinResultWidget extends StatelessWidget {
                     children: [
                       Text(
                         "Azimjon",
-                        style: AppTextStyle().titleMedium?.copyWith(color: AppColors.cFE3340, fontSize: 24.sp),
+                        style: const AppTextStyle().titleMedium?.copyWith(color: AppColors.cFE3340, fontSize: 24.sp),
                       ),
                       Text(
                         '0',
-                        style: AppTextStyle().titleMedium?.copyWith(color: AppColors.cFE3340, fontSize: 24.sp),
+                        style: const AppTextStyle().titleMedium?.copyWith(color: AppColors.cFE3340, fontSize: 24.sp),
                       ),
                     ],
                   ),
@@ -142,7 +141,7 @@ class MultiplayerWinResultWidget extends StatelessWidget {
                 ],
               ),
             ),
-            AppImages.winIcon
+            // AppImages.winIcon
           ],
         ),
         SizedBox(height: 80.h),

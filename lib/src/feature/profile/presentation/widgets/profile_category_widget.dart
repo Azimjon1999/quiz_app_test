@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 // import 'package:provider/provider.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/widget/custom_box_widget.dart';
@@ -6,6 +7,8 @@ import 'package:quiz_app/src/core/widget/custom_box_widget.dart';
 import '../../controller/profile_controller.dart';
 
 class ProfileCategoryWidget extends StatelessWidget {
+  const ProfileCategoryWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Consumer<ProfileController>(
