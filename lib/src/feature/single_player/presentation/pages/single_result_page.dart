@@ -33,11 +33,14 @@ class SingleResultPage extends StatelessWidget {
               ),
               SizedBox(height: 110.h),
               Stack(
-                alignment: const Alignment(0, -1.5),
+                alignment: const Alignment(0, -2),
                 children: [
                   CustomBoxBigWidget(
-                    padding:
-                        EdgeInsets.only(left: 20.w, right: 20.w, top: 60.h),
+                    padding: EdgeInsets.only(
+                      left: 20.w,
+                      right: 20.w,
+                      top: 60.h,
+                    ),
                     height: 400.h,
                     child: Column(
                       children: [
@@ -121,10 +124,10 @@ class SingleResultPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: 130.w,
                     height: 130.h,
-                    color: AppColors.c0048B5,
+                    child: Image.asset('assets/images/win_icon.png'),
                   ),
                 ],
               ),

@@ -6,9 +6,7 @@ import 'package:quiz_app/src/core/widget/custom_box_widget.dart';
 class MultiplayerTitleWidget extends StatelessWidget {
   final String? titleLarge;
   final String? titleMedium;
-
    MultiplayerTitleWidget({super.key,this.titleLarge, this.titleMedium} );
-
   @override
   Widget build(BuildContext context) {
     return CustomBoxWidget(
@@ -19,10 +17,12 @@ class MultiplayerTitleWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
+              textAlign: TextAlign.center,
               titleLarge??  '',
               style: AppTextStyle().titleLarge?.copyWith(fontSize: 30.sp),
             ),
             Text(
+              textAlign: TextAlign.center,
               titleMedium?? "",
               style: AppTextStyle().titleLarge,
             ),

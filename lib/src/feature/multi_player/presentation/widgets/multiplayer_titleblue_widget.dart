@@ -5,8 +5,8 @@ import 'package:quiz_app/src/core/style/text_style.dart';
 import 'package:quiz_app/src/core/widget/custom_box_big_widget.dart';
 
 class MultiplayerTitleblueWidget extends StatelessWidget {
-  String title;
-   MultiplayerTitleblueWidget({super.key, required this.title});
+final  String title;
+ const  MultiplayerTitleblueWidget({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {

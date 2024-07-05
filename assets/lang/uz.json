@@ -44,5 +44,6 @@
   "gameWillstartafter3seconds" : "O‘yin 3 soniyadan keyin boshlanadi",
   "youwin" : "Siz g‘alaba qozondingiz",
   "youlose" : "Siz yutqazdingiz",
-  "newPassword" : "Yangi Parol"
+  "newPassword" : "Yangi Parol",
+  "draw" : "Durrang"
 }

@@ -17,7 +17,7 @@ final class AppRouteName {
   static const String homePage = "/";
   static const String updateInfoPage = 'updatePage';
   // Profile Section
-  static const String profilePage = "/profile_page";
+  static const String profilePage = "profile_page";
   // Single Player Section
   static const String singlePlayerPage = "single_player_page";
   static const String singlePlayerQuiz = 'single_player_quiz';
@@ -26,5 +26,6 @@ final class AppRouteName {
   static const String multiPlayerPage = "multi_player_page";
   static const String multiPlayerWaiting = "multi_player_waiting";
   static const String multiPlayerQuiz = "multi_player_quiz";
+  static const String multiPlayerGetReady = "multi_player_get_ready";
   static const String multiPlayerResult = "multi_player_result";
 }

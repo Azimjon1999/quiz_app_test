@@ -2,11 +2,12 @@ import "package:shared_preferences/shared_preferences.dart";
 
 enum StorageKey {
   user,
-  token,
+  refToken,
+  acessToken,
   theme,
 }
 
-sealed class UserStorage {
+sealed class AppStorage {
 
   static Future<void> store({required StorageKey key, required String value}) async {
     final SharedPreferences storage = await SharedPreferences.getInstance();

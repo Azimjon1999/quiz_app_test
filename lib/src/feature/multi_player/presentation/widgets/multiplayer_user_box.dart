@@ -1,12 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quiz_app/src/core/style/text_style.dart';
 
 class MultiplayerUserBox extends StatelessWidget {
-  String name;
-  String id;
-   MultiplayerUserBox({super.key, required this.name, required this.id});
+ final String name;
+ final String id;
+ const  MultiplayerUserBox({super.key, required this.name, required this.id});
   @override
   Widget build(BuildContext context) {
     return  Padding(

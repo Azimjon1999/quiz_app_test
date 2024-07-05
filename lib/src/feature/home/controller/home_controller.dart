@@ -22,6 +22,6 @@ class HomeController extends ChangeNotifier {
   }
 
   void navigateToProfile(BuildContext context) {
-    context.go(AppRouteName.profilePage);
+    context.go('${AppRouteName.homePage}${AppRouteName.profilePage}');
   }
 }

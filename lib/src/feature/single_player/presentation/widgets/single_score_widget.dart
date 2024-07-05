@@ -10,7 +10,7 @@ class SingleScoreWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      alignment: const Alignment(0, -9),
+      alignment: const Alignment(0, -10),
       children: [
         CustomBoxWidget(
           width: 156.w,
@@ -26,10 +26,10 @@ class SingleScoreWidget extends StatelessWidget {
             ),
           ),
         ),
-        Container(
+        SizedBox(
           width: 70.w,
           height: 70.h,
-          color: AppColors.c0048B5,
+          child: Image.asset('assets/images/win_icon.png'),
         ),
       ],
     );
