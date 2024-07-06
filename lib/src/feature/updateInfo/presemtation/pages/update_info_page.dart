@@ -34,7 +34,7 @@ class UpdateInfoPage extends StatelessWidget {
             ),
             SizedBox(height: 24.h),
             const UpdateInfoWidget(
-              userName: 'Azimjon',
+              userName: 'Aliy',
               email: 'AzimjonEshonxojayec@gmailcom',
             ),
             SizedBox(height: 94.h),

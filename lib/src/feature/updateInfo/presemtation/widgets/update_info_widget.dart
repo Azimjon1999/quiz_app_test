@@ -6,6 +6,7 @@ import 'package:quiz_app/src/core/widget/custom_box_widget.dart';
 class UpdateInfoWidget extends StatelessWidget {
   final String userName;
   final String email;
+
   const UpdateInfoWidget({
     super.key,
     required this.userName,
@@ -24,36 +25,20 @@ class UpdateInfoWidget extends StatelessWidget {
           children: [
             Text(
               'User name',
-              style: TextStyle(
-                fontSize: 14.sp,
-                fontFamily: 'IrishGrover',
-                color: AppColors.c0048B5,
-              ),
+              style: TextStyle(fontSize: 14.sp, fontFamily: 'IrishGrover', color: AppColors.c0048B5, decoration: TextDecoration.none),
             ),
             Text(
               userName,
-              style: TextStyle(
-                fontSize: 22.sp,
-                fontFamily: 'IrishGrover',
-                color: AppColors.c0048B5,
-              ),
+              style: TextStyle(fontSize: 22.sp, fontFamily: 'IrishGrover', color: AppColors.c0048B5, decoration: TextDecoration.none),
             ),
             SizedBox(height: 16.h),
             Text(
               'Email Adress',
-              style: TextStyle(
-                fontSize: 14.sp,
-                fontFamily: 'IrishGrover',
-                color: AppColors.c0048B5,
-              ),
+              style: TextStyle(fontSize: 14.sp, fontFamily: 'IrishGrover', color: AppColors.c0048B5, decoration: TextDecoration.none),
             ),
             Text(
               email,
-              style: TextStyle(
-                fontSize: 22.sp,
-                fontFamily: 'IrishGrover',
-                color: AppColors.c0048B5,
-              ),
+              style: TextStyle(fontSize: 22.sp, fontFamily: 'IrishGrover', color: AppColors.c0048B5, decoration: TextDecoration.none),
             ),
           ],
         ),
