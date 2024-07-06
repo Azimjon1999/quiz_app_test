@@ -32,25 +32,27 @@ class RegisterPage extends StatelessWidget {
                   const AppTitleWidget(),
                   SizedBox(height: 50.h),
                   MyTextField(
-                    text: Words.emailAdress.tr(context) ,
+                    text: Words.emailAdress.tr(context),
                     controller: provider.emailC,
                   ),
                   SizedBox(height: 20.h),
                   MyTextField(
-                    text:Words.password.tr(context) ,
+                    text: Words.password.tr(context),
                     controller: provider.passC,
                   ),
                   SizedBox(height: 20.h),
                   MyTextField(
-                    text:Words.confirmPassword.tr(context) ,
+                    text: Words.confirmPassword.tr(context),
                     controller: provider.confirmC,
                   ),
                   SizedBox(height: 20.h),
                   CustomButtonWidget(
                     // witdh: double.infinity,
-                    func: () => provider.navigateToOtp(context),
-                    child:  Text(
-                      Words.register.tr(context) ,
+                    func: () async {
+                      provider.register(context);
+                    },
+                    child: Text(
+                      Words.register.tr(context),
                       style: const TextStyle(
                         fontSize: 30,
                         color: AppColors.white,

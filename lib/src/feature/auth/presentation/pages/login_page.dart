@@ -46,7 +46,9 @@ class LoginPage extends StatelessWidget {
                     onTap: () => provider.navigateToForgotPassword(context)),
                 SizedBox(height: 16.h),
                 CustomButtonWidget(
-                  func: () => provider.navigateToHome(context),
+                  func: () async {
+                    provider.login(context);
+                  },
                   child: Text(
                     Words.login.tr(context),
                     style: const TextStyle(

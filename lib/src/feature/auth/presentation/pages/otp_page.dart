@@ -21,6 +21,15 @@ class OtpPage extends StatelessWidget {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+        leading: InkWell(
+          child: Icon(Icons.arrow_back),
+          onTap: () {
+            provider.otp.clear();
+            context.pop();
+          },
+        ),
+      ),
       body: ScaffoldWithBackgroundWidget(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -46,7 +55,9 @@ class OtpPage extends StatelessWidget {
                       ),
                       SizedBox(height: 196.h),
                       CustomButtonWidget(
-                        func: () => provider.navigateToLogin(context),
+                        func: () async {
+                         await provider.checkOtpCode();
+                        },
                         child: Text(
                           Words.verifiCode.tr(context),
                           style: const TextStyle(
