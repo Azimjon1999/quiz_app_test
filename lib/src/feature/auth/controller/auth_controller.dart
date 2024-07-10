@@ -80,22 +80,50 @@ class AuthController extends ChangeNotifier {
     );
     if (tokenModel != null) {
       token = tokenModel.token;
-      log(tokenModel.token ?? "Bosh");
       navigateToOtp(context);
     }
   }
 
   /// Check Otp Method post email, otpCode and acessToken
-  Future<void> checkOtpCode() async {
-    // Log OtpCode and Token
-    log('authController');
-    log(otp.text.trim());
-    log(token ?? 'Bosh');
-
-    await appRepositoryImpl.confirmOtpUser(
+  Future<void> checkOtpCode(BuildContext context) async {
+    String? result = await appRepositoryImpl.confirmOtp(
       email: emailC.text.trim(),
       code: otp.text.trim(),
       token: token!,
     );
+
+    if (result != null) {
+      navigateToLogin(context);
+    } else {
+      log('error checkOtp FUnc');
+    }
+  }
+
+  /// Send verifation code to email
+  Future<void> forgotPasswordE(BuildContext context) async {
+    TokenModel? tokenModel = await appRepositoryImpl.forgotPassword(
+      email: emailC.text.trim(),
+    );
+    if (tokenModel != null) {
+      token = tokenModel.token;
+      navigateToOtpForgotPassword(context);
+    } else {
+      log('error');
+    }
+  }
+
+  /// Check Otp Method post email, otpCode and acessToken
+  Future<void> checkForgotPasswordOtpCode(BuildContext context) async {
+    String? result = await appRepositoryImpl.confirmOtpForgot(
+      email: emailC.text.trim(),
+      code: otp.text.trim(),
+      token: token!,
+    );
+
+    if (result != null) {
+      navigateToNewPassword(context);
+    } else {
+      log('error checkOtp FUnc');
+    }
   }
 }

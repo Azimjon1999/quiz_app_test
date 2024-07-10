@@ -29,14 +29,14 @@ class MyTextField extends StatelessWidget {
         },
         style: const TextStyle(
           fontSize: 14,
-          fontFamily: 'IrishGrover',
+          // fontFamily: 'IrishGrover',
         ),
         decoration: InputDecoration(
           label: Text(
             text,
             style: const TextStyle(
               color: AppColors.c7A7A7A,
-              fontFamily: 'IrishGrover',
+              // fontFamily: 'IrishGrover',
             ),
           ),
           border: OutlineInputBorder(

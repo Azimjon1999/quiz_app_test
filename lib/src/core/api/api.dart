@@ -15,13 +15,17 @@ class Api {
   /// Methods
 
   /// Post
-  static Future<String?> postUser({
+  static Future<String?> post({
     required String api,
     required Map<String, dynamic> body,
-    required Map<String, dynamic> param
+    Map<String, String> header = ApiConstants.headers,
   }) async {
-    final Uri url = Uri.http(ApiConstants.baseUrl, api, param);
-    final Response response = await http.post(url, body: jsonEncode(body), headers: ApiConstants.headers);
+    final Uri url = Uri.http(ApiConstants.baseUrl, api);
+    final Response response = await http.post(
+      url,
+      body: jsonEncode(body),
+      headers: header,
+    );
     if (response.statusCode == 200 || response.statusCode == 201) {
       return response.body;
     }

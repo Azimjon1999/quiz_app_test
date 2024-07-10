@@ -16,42 +16,40 @@ class NewPasswordCreadPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<AuthController>(context);
     return Scaffold(
-      // resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: false,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: ScaffoldWithBackgroundWidget(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 34),
-            child: Column(
-              children: [
-                SizedBox(height: 170.h),
-                const AppTitleWidget(),
-                SizedBox(height: 50.h),
-                MyTextField(
-                  controller: provider.emailC,
-                  text: Words.newPassword.tr(context) ,
-                  type: TextInputType.emailAddress,
-                ),
-                SizedBox(height: 20.h),
-                MyTextField(
-                  controller: provider.passC,
-                  text: Words.confirmPassword.tr(context) ,
-                ),
-                SizedBox(height: 16.h),
-                CustomButtonWidget(
-                  func: () => provider.navigateToLogin(context),
-                  child:  Text(
-                    Words.confirm.tr(context) ,
-                    style: const TextStyle(
-                      fontSize: 30,
-                      color: AppColors.white,
-                      fontFamily: 'IrishGrover',
-                    ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 34),
+          child: Column(
+            children: [
+              SizedBox(height: 170.h),
+              const AppTitleWidget(),
+              SizedBox(height: 50.h),
+              MyTextField(
+                controller: provider.emailC,
+                text: Words.newPassword.tr(context) ,
+                type: TextInputType.emailAddress,
+              ),
+              SizedBox(height: 20.h),
+              MyTextField(
+                controller: provider.passC,
+                text: Words.confirmPassword.tr(context) ,
+              ),
+              SizedBox(height: 16.h),
+              CustomButtonWidget(
+                func: () => provider.navigateToLogin(context),
+                child:  Text(
+                  Words.confirm.tr(context) ,
+                  style: const TextStyle(
+                    fontSize: 30,
+                    color: AppColors.white,
+                    fontFamily: 'IrishGrover',
                   ),
                 ),
-                SizedBox(height: 24.h),
-              ],
-            ),
+              ),
+              SizedBox(height: 24.h),
+            ],
           ),
         ),
       ),

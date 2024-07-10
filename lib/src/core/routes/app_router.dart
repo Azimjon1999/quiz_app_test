@@ -84,35 +84,33 @@ final class AppRouter {
           GoRoute(
             path: AppRouteName.profilePage,
             builder: (BuildContext context, GoRouterState state) =>
-            const ProfilePage(),
+                const ProfilePage(),
           ),
           GoRoute(
             path: AppRouteName.updateInfoPage,
             builder: (context, state) => const UpdateInfoPage(),
           ),
           GoRoute(
-            path: AppRouteName.multiPlayerPage,
-            builder: (context, state) => const MultiPlayerPage(),
-            routes: [
-              GoRoute(
-                path: AppRouteName.multiPlayerWaiting,
-                builder: (context, state) => const MultiPlayerWaitingPage(),
-              ),
-              GoRoute(
-                path: AppRouteName.multiPlayerGetReady,
-                builder: (context, state) => const MultiplayerGetReadyPage(),
-              ),
-              GoRoute(
-                path: AppRouteName.multiPlayerQuiz,
-                builder: (context, state) => const MultiplayerQuizPage(),
-              ),
-              GoRoute(
-                path: AppRouteName.multiPlayerResult,
-                builder: (context, state) => const MultiPlayerResultPage(),
-              ),
-            ]
-          ),
-
+              path: AppRouteName.multiPlayerPage,
+              builder: (context, state) => const MultiPlayerPage(),
+              routes: [
+                GoRoute(
+                  path: AppRouteName.multiPlayerWaiting,
+                  builder: (context, state) => const MultiPlayerWaitingPage(),
+                ),
+                GoRoute(
+                  path: AppRouteName.multiPlayerGetReady,
+                  builder: (context, state) => const MultiplayerGetReadyPage(),
+                ),
+                GoRoute(
+                  path: AppRouteName.multiPlayerQuiz,
+                  builder: (context, state) => const MultiplayerQuizPage(),
+                ),
+                GoRoute(
+                  path: AppRouteName.multiPlayerResult,
+                  builder: (context, state) => const MultiPlayerResultPage(),
+                ),
+              ]),
           GoRoute(
             path: AppRouteName.singlePlayerPage,
             builder: (context, state) => const SinglePlayerPage(),
@@ -135,7 +133,6 @@ final class AppRouter {
           ),
         ],
       ),
-
     ],
   );
 }

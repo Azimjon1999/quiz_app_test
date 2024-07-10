@@ -40,7 +40,7 @@ class ForgetPasswordPage extends StatelessWidget {
               ),
               SizedBox(height: 16.h),
               CustomButtonWidget(
-                func: () => provider.navigateToOtpForgotPassword(context),
+                func: () => provider.forgotPasswordE(context),
                 child: Text(
                   Words.Continue.tr(context),
                   style: const TextStyle(

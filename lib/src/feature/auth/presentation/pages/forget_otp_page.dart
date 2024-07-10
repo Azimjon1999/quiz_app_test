@@ -23,43 +23,40 @@ class OtpForgetPage extends StatelessWidget {
       body: ScaffoldWithBackgroundWidget(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: SingleChildScrollView(
-            reverse: false,
-            child: Column(
-              children: [
-                const SizedBox(height: 50),
-                AppbarLeadingWidget(
-                  func: () {
-                    context.pop();
-                  },
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Column(
-                    children: [
-                      SizedBox(height: 86.h),
-                      const AppTitleWidget(),
-                      SizedBox(height: 68.h),
-                      OtpPinCodeWidget(
-                        otp: provider.otp,
-                      ),
-                      SizedBox(height: 196.h),
-                      CustomButtonWidget(
-                        func: () => provider.navigateToNewPassword(context),
-                        child: Text(
-                          Words.verifiCode.tr(context),
-                          style: const TextStyle(
-                            fontSize: 30,
-                            color: AppColors.white,
-                            fontFamily: 'IrishGrover',
-                          ),
+          child: Column(
+            children: [
+              const SizedBox(height: 50),
+              AppbarLeadingWidget(
+                func: () {
+                  context.pop();
+                },
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  children: [
+                    SizedBox(height: 86.h),
+                    const AppTitleWidget(),
+                    SizedBox(height: 68.h),
+                    OtpPinCodeWidget(
+                      otp: provider.otp,
+                    ),
+                    SizedBox(height: 196.h),
+                    CustomButtonWidget(
+                      func: () => provider.checkForgotPasswordOtpCode(context),
+                      child: Text(
+                        Words.verifiCode.tr(context),
+                        style: const TextStyle(
+                          fontSize: 30,
+                          color: AppColors.white,
+                          fontFamily: 'IrishGrover',
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

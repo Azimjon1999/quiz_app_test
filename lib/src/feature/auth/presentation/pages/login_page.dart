@@ -50,8 +50,8 @@ class LoginPage extends StatelessWidget {
                   },
                   child: Text(
                     Words.login.tr(context),
-                    style: const TextStyle(
-                      fontSize: 30,
+                    style:  TextStyle(
+                      fontSize: 30.sp,
                       color: AppColors.white,
                       fontFamily: 'IrishGrover',
                     ),
