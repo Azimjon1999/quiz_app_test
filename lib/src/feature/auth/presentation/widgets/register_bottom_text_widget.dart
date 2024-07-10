@@ -10,9 +10,9 @@ class RegisterBottomTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      child:  Text(
-        Words.alreadyhaveaccount.tr(context) ,
-        style: TextStyle(
+      child: Text(
+        Words.donthaveanaccount.tr(context),
+        style: const TextStyle(
           fontSize: 18,
           color: AppColors.white,
           fontFamily: 'IrishGrover',

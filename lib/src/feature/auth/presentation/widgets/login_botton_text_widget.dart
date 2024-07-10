@@ -11,7 +11,7 @@ class LoginBottonTextWidget extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Text(
-        Words.donthaveanaccount.tr(context),
+        Words.alreadyhaveaccount.tr(context),
         style: const TextStyle(
           fontSize: 18,
           color: AppColors.white,

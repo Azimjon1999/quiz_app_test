@@ -97,10 +97,10 @@ sealed class AppImages {
     fit: BoxFit.cover,
   );
 
-    static final Image downIconPng = Image.asset(
+  static final Image downIconPng = Image.asset(
     "assets/images/down_icon.png",
-    height: 70.h,
-    width: 70.w,
+    height: 30.h,
+    width: 30.w,
     fit: BoxFit.cover,
   );
 }

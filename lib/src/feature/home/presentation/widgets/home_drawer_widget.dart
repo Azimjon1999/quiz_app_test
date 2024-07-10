@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quiz_app/src/core/localization/words.dart';
 import 'package:quiz_app/src/core/style/colors.dart';
 import 'package:quiz_app/src/core/style/images.dart';
@@ -25,18 +26,18 @@ class HomeDrawerWidget extends StatelessWidget {
           children: [
             Center(
               child: Padding(
-                padding: const EdgeInsets.only(
-                  top: 90,
-                  bottom: 45,
+                padding: EdgeInsets.only(
+                  top: 90.h,
+                  bottom: 45.w,
                 ),
                 child: Column(
                   children: [
                     AppImages.userBlueIcon,
-                    const SizedBox(height: 15),
+                    SizedBox(height: 15.h),
                     Text(
                       Words.userName.tr(context),
                       style: const TextStyle(
-                        fontSize: 25,
+                        fontSize: 28,
                         fontFamily: 'IrishGrover',
                         color: AppColors.c0048B5,
                       ),
@@ -49,7 +50,7 @@ class HomeDrawerWidget extends StatelessWidget {
               height: 1,
               color: AppColors.c7A7A7A,
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.sp),
             MaterialButton(
               onPressed: languageOnTap,
               minWidth: double.infinity,
@@ -58,48 +59,48 @@ class HomeDrawerWidget extends StatelessWidget {
                 child: Text(
                   Words.language.tr(context),
                   textAlign: TextAlign.start,
-                  style: const TextStyle(
-                    fontSize: 25,
+                  style: TextStyle(
+                    fontSize: 26.sp,
                     fontFamily: 'IrishGrover',
                     color: AppColors.c0048B5,
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.h),
             const Divider(
               height: 1,
               color: AppColors.c7A7A7A,
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.h),
             MaterialButton(
               onPressed: chahgeInfoOnTap,
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   Words.changeInfo.tr(context),
-                  style: const TextStyle(
-                    fontSize: 25,
+                  style: TextStyle(
+                    fontSize: 26.sp,
                     fontFamily: 'IrishGrover',
                     color: AppColors.c0048B5,
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.h),
             const Divider(
               height: 1,
               color: AppColors.c7A7A7A,
             ),
-            const SizedBox(height: 340),
+            SizedBox(height: 360.h),
             MaterialButton(
               onPressed: logOutOnTap,
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   Words.logOut.tr(context),
-                  style: const TextStyle(
-                    fontSize: 25,
+                  style: TextStyle(
+                    fontSize: 26.sp,
                     fontFamily: 'IrishGrover',
                     color: AppColors.cFE3340,
                   ),
