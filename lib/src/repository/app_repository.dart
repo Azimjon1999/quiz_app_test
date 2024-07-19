@@ -30,4 +30,8 @@ abstract class AppRepository {
     required String code,
     required String token,
   });
+
+  Future<TokenModel?> refreshToken({
+    required String reftoken,
+  });
 }

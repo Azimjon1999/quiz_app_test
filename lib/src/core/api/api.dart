@@ -15,12 +15,15 @@ class Api {
   /// Methods
 
   /// Post
+
   static Future<String?> post({
     required String api,
     required Map<String, dynamic> body,
     Map<String, String> header = ApiConstants.headers,
+    Map<String, Object?>? param,
   }) async {
-    final Uri url = Uri.http(ApiConstants.baseUrl, api);
+    var queryParam = param ?? ApiConstants.emptyParam();
+    final Uri url = Uri.http(ApiConstants.baseUrl, api, queryParam);
     final Response response = await http.post(
       url,
       body: jsonEncode(body),

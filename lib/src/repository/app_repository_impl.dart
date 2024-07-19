@@ -93,4 +93,18 @@ class AppRepositoryImpl implements AppRepository {
       return null;
     }
   }
+
+  @override
+  Future<TokenModel?> refreshToken({required String reftoken}) async {
+    String? str = await Api.post(
+      api: ApiConstants.apiRefToken,
+      body: {},
+      param: ApiConstants.paramRefreshToken(reftoken),
+    );
+    if (str != null) {
+      TokenModel tokens = tokenModelFromJson(str);
+      return tokens;
+    }
+    return null;
+  }
 }

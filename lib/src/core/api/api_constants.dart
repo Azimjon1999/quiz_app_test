@@ -14,16 +14,23 @@ class ApiConstants {
   static const apiUpdatePassword = '/api/auth/update-password';
   static const apiForgotPasswordConftim = '/api/auth/forgot-password-confirm';
 
-  /// ...-Api
+  /// Refresh-Token-Api
+  static const apiRefToken = '/api/refresh';
 
   /// Header
   static const Map<String, String> headers = {
     "Content-Type": "application/json",
   };
 
-
   /// Params
   static Map<String, Object?> emptyParam() => const <String, Object?>{};
+  static Map<String, Object?> paramRefreshToken(String token) {
+    return <String, Object?>{
+      "refreshToken ": token,
+    };
+  }
+
+  /// Headers
   static Map<String, String> headerOtpConfirm(String token) => <String, String>{
         "Content-Type": "application/json",
         "Registration-token": token,
@@ -35,9 +42,9 @@ class ApiConstants {
         "Reset-password-token": token,
       };
 
-    static Map<String, String> headerUpdatePassword(String token) =>
+  static Map<String, String> headerUpdatePassword(String token) =>
       <String, String>{
         "Content-Type": "application/json",
-        "RReset-email-token": token,
+        "Reset-email-token": token,
       };
 }
